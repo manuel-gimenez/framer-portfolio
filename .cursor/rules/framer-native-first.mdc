@@ -1,0 +1,41 @@
+---
+description: Framer — evaluate native features before writing a code override/component
+alwaysApply: true
+---
+
+# Framer: native-first
+
+When I ask for a Framer code override or code component, FIRST check whether a
+**native Framer feature** solves it. If one does, propose it before writing code.
+
+Keep the proposal to ~2 lines to save tokens:
+
+> Native option: <how, in the Framer editor>
+> Code option: <only if needed>
+> Recommendation: <one>
+
+Only reach for a code override/component when native genuinely can't do it —
+e.g. clipboard, external APIs, custom DOM/animation, complex runtime logic.
+
+## Native features to check first
+
+- **Interactions** → On Click / On Tap → **Set Variant**, Scroll To Section,
+  Open/Close Overlay, Navigate. (Most "do X when tapped" needs this, not code.)
+- **Variants + Breakpoints** for state and responsive behavior.
+- **Scroll / Appear effects** and **Variables** for dynamic content.
+- **Link → Section** for in-page scrolling.
+
+## Hard-won gotchas (don't repeat these)
+
+- Do NOT force a component's `variant` from an override when the component
+  manages its variant via internal interactions (e.g. hamburger → open). The
+  override's prop won't win. Use a native **Set Variant** interaction, or trigger
+  the component's own control instead.
+- For nav/menu links, prefer **On Click** over **On Tap**. On Tap is a gesture
+  that can be cancelled by scroll/movement and silently do nothing; On Click
+  fires reliably.
+
+## Escape hatch
+
+If 3 code attempts fail or each is a variation of the last, STOP and ask
+"should this be code at all?" — re-check the native options above.

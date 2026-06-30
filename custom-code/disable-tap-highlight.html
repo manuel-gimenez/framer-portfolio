@@ -1,0 +1,30 @@
+<!--
+  Disable Tap Highlight — Framer site custom code.
+
+  Problem it solves: on mobile, every button showed a gray box behind it when
+  tapped (the browser's default tap-highlight), and long-pressing could trigger
+  a system callout — both made the site feel less polished. This removes the tap
+  highlight globally and suppresses the touch callout on interactive elements so
+  taps feel clean and app-like. Added as a polish pass across all buttons.
+
+  Framer placement (Site Settings → Custom Code):
+    - Name:      Disable Tap Highlight
+    - Location:  End of <body> tag
+    - Pages:     All
+    - Run:       Once
+
+  Changelog
+    v1.0.0 (30-06-2026) — Initial version.
+-->
+<style>
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    a,
+    button,
+    [role="button"] {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+</style>

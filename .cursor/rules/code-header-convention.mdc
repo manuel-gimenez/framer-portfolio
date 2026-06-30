@@ -1,0 +1,32 @@
+---
+description: Header + changelog convention for code overrides, components, and custom code
+alwaysApply: true
+---
+
+# Code header convention
+
+Every file I author in `overrides/`, `components/`, or `custom-code/` must open
+with a header comment in this format:
+
+```
+Name — one-line purpose.
+
+Problem it solves: the real reason it exists, and where it's used on the site.
+Usage: which layer / page it's applied to.
+
+Changelog
+  v1.0.0 (DD-MM-YYYY) — Initial version.
+```
+
+## Rules
+
+- **Ask, don't guess.** If I haven't told you the problem it solves (or it's
+  ambiguous), ASK me before writing the file. Don't invent a rationale.
+- **Dates are DD-MM-YYYY.**
+- **Versioning** (newest entry on top, default to patch):
+  - patch (`v1.0.1`) — small fix or tweak ← default for most iterations
+  - minor (`v1.1.0`) — a new option / prop / behavior
+  - major (`v2.0.0`) — a rework
+- Changelog entries record the **why**, not just the what.
+- Keep the existing `@framer...` annotations (e.g. `@framerSupportedLayoutWidth`)
+  intact when present — they are functional.

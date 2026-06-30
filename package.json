@@ -1,0 +1,9 @@
+{
+  "name": "framer-portfolio",
+  "private": true,
+  "description": "Framer portfolio code — overrides, components, and assets",
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}
