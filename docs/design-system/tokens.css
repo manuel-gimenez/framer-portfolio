@@ -1,0 +1,404 @@
+/*
+  Design tokens — verbatim export from the Figma Make portfolio attempt.
+
+  Source of truth for the design system (colors, typography scale, spacing).
+  This file is a REFERENCE only — it is NOT loaded by the Framer site.
+  Tailwind v4 syntax (@theme, @custom-variant, @apply) — Figma Make output.
+
+  To use in Framer:
+    - Colors      -> Framer Color Styles
+    - typo-*      -> Framer Text Styles (mobile + 768px desktop breakpoint)
+    - spacing     -> values to reuse in layouts / breakpoints
+  See README.md in this folder for a px-converted transcription table.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================
+   PRIMITIVES
+========================================= */
+
+:root {
+  --font-size-root: 16px;
+
+  /* Color primitives */
+  --color-gray-100: #ffffff;
+  --color-gray-200: #fafafa;
+  --color-gray-400: #e9e9e9;
+  --color-gray-600: #778877;
+  --color-gray-800: #414141;
+  --color-gray-900: #212121;
+
+  /* Typography primitives */
+  --font-family-inter: 'Inter', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-12: 0.75rem;
+  --font-size-13: 0.8125rem;
+  --font-size-14: 0.875rem;
+  --font-size-15: 0.9375rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-22: 1.375rem;
+  --font-size-24: 1.5rem;
+  --font-size-28: 1.75rem;
+  --font-size-32: 2rem;
+  --font-size-48: 3rem;
+  --font-size-142: 8.875rem;
+  --font-size-164: 10.25rem;
+
+  --letter-spacing-400: -0.25rem;
+  --letter-spacing-300: -0.0625rem;
+  --letter-spacing-200: -0.0313rem;
+  --letter-spacing-100: -0.0125rem;
+  --letter-spacing-050: -0.0063rem;
+  --letter-spacing-0: 0rem;
+
+  --line-height-160: 1rem;
+  --line-height-180: 1.125rem;
+  --line-height-190: 1.1875rem;
+  --line-height-200: 1.25rem;
+  --line-height-210: 1.3125rem;
+  --line-height-220: 1.375rem;
+  --line-height-240: 1.5rem;
+  --line-height-260: 1.625rem;
+  --line-height-280: 1.75rem;
+  --line-height-300: 1.875rem;
+  --line-height-330: 2.0625rem;
+  --line-height-336: 2.1rem;
+  --line-height-365: 2.2813rem;
+  --line-height-380: 2.375rem;
+  --line-height-415: 2.5938rem;
+  --line-height-440: 2.75rem;
+  --line-height-520: 3.25rem;
+  --line-height-580: 3.625rem;
+  --line-height-1280: 8rem;
+  --line-height-1480: 9.25rem;
+
+  /* Spacing primitives */
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-56: 3.5rem;
+  --space-64: 4rem;
+  --space-72: 4.5rem;
+  --space-80: 5rem;
+  --space-172: 10.75rem;
+  --space-200: 12.5rem;
+  --space-240: 15rem;
+}
+
+/* =========================================
+   SEMANTIC TOKENS — MOBILE BASE
+========================================= */
+
+:root {
+  /* Colors */
+  --background: var(--color-gray-100);
+  --foreground: var(--color-gray-900);
+  --border: var(--color-gray-400);
+
+  --surface-surface-bg: var(--color-gray-200);
+  --surface-surface-bg-white: var(--color-gray-100);
+
+  --text-text-primary: var(--color-gray-900);
+  --text-text-secondary: var(--color-gray-800);
+  --text-text-tertiary: var(--color-gray-600);
+
+  /* Typography — mobile */
+  --hero-large-font-family: var(--font-family-inter);
+  --hero-large-font-weight: var(--font-weight-bold);
+  --hero-large-font-size: var(--font-size-48);
+  --hero-large-line-height: var(--line-height-520);
+  --hero-large-letter-spacing: var(--letter-spacing-300);
+
+  --hero-default-font-family: var(--font-family-inter);
+  --hero-default-font-weight: var(--font-weight-bold);
+  --hero-default-font-size: var(--font-size-48);
+  --hero-default-line-height: var(--line-height-440);
+  --hero-default-letter-spacing: var(--letter-spacing-200);
+
+  --h-large-font-family: var(--font-family-inter);
+  --h-large-font-weight: var(--font-weight-semi-bold);
+  --h-large-font-size: var(--font-size-32);
+  --h-large-line-height: var(--line-height-380);
+  --h-large-letter-spacing: var(--letter-spacing-200);
+
+  --h-default-font-family: var(--font-family-inter);
+  --h-default-font-weight: var(--font-weight-semi-bold);
+  --h-default-font-size: var(--font-size-24);
+  --h-default-line-height: var(--line-height-260);
+  --h-default-letter-spacing: var(--letter-spacing-050);
+
+  --h-small-font-family: var(--font-family-inter);
+  --h-small-font-weight: var(--font-weight-regular);
+  --h-small-font-size: var(--font-size-20);
+  --h-small-line-height: var(--line-height-260);
+  --h-small-letter-spacing: var(--letter-spacing-050);
+
+  --subtitle-large-font-family: var(--font-family-inter);
+  --subtitle-large-font-weight: var(--font-weight-medium);
+  --subtitle-large-font-size: var(--font-size-18);
+  --subtitle-large-line-height: var(--line-height-260);
+  --subtitle-large-letter-spacing: var(--letter-spacing-0);
+
+  --body-large-font-family: var(--font-family-inter);
+  --body-large-font-weight: var(--font-weight-regular);
+  --body-large-font-size: var(--font-size-18);
+  --body-large-line-height: var(--line-height-260);
+  --body-large-letter-spacing: var(--letter-spacing-0);
+
+  --body-default-font-family: var(--font-family-inter);
+  --body-default-font-weight: var(--font-weight-regular);
+  --body-default-font-size: var(--font-size-16);
+  --body-default-line-height: var(--line-height-240);
+  --body-default-letter-spacing: var(--letter-spacing-0);
+
+  --label-large-font-family: var(--font-family-inter);
+  --label-large-font-weight: var(--font-weight-bold);
+  --label-large-font-size: var(--font-size-16);
+  --label-large-line-height: var(--line-height-220);
+  --label-large-letter-spacing: var(--letter-spacing-0);
+
+  --label-default-font-family: var(--font-family-inter);
+  --label-default-font-weight: var(--font-weight-semi-bold);
+  --label-default-font-size: var(--font-size-14);
+  --label-default-line-height: var(--line-height-200);
+  --label-default-letter-spacing: var(--letter-spacing-0);
+
+  --label-small-font-family: var(--font-family-inter);
+  --label-small-font-weight: var(--font-weight-bold);
+  --label-small-font-size: var(--font-size-13);
+  --label-small-line-height: var(--line-height-180);
+  --label-small-letter-spacing: var(--letter-spacing-0);
+
+  --label-caption-font-family: var(--font-family-inter);
+  --label-caption-font-weight: var(--font-weight-regular);
+  --label-caption-font-size: var(--font-size-12);
+  --label-caption-line-height: var(--line-height-160);
+  --label-caption-letter-spacing: var(--letter-spacing-0);
+
+  /* Spacing — mobile */
+  --gap-200: var(--space-16);
+  --gap-300: var(--space-20);
+  --gap-400: var(--space-20);
+  --gap-500: var(--space-24);
+  --gap-600: var(--space-32);
+  --gap-700: var(--space-40);
+  --gap-800: var(--space-72);
+  --gap-900: var(--space-32);
+
+  --padding-horizontal: var(--space-16);
+  --padding-top: var(--space-40);
+  --padding-bottom: var(--space-40);
+}
+
+/* =========================================
+   DESKTOP OVERRIDE
+========================================= */
+
+@media (min-width: 768px) {
+  :root {
+    --hero-large-font-size: var(--font-size-164);
+    --hero-large-line-height: var(--line-height-1480);
+    --hero-large-letter-spacing: var(--letter-spacing-400);
+
+    --hero-default-font-size: var(--font-size-142);
+    --hero-default-line-height: var(--line-height-1280);
+    --hero-default-letter-spacing: var(--letter-spacing-400);
+
+    --h-large-font-size: var(--font-size-48);
+    --h-large-line-height: var(--line-height-580);
+    --h-large-letter-spacing: var(--letter-spacing-300);
+
+    --h-default-font-size: var(--font-size-28);
+    --h-default-line-height: var(--line-height-365);
+    --h-default-letter-spacing: var(--letter-spacing-100);
+
+    --h-small-font-size: var(--font-size-28);
+    --h-small-line-height: var(--line-height-365);
+    --h-small-letter-spacing: var(--letter-spacing-100);
+
+    --subtitle-large-font-size: var(--font-size-28);
+    --subtitle-large-line-height: var(--line-height-336);
+    --subtitle-large-letter-spacing: var(--letter-spacing-100);
+
+    --body-large-font-size: var(--font-size-32);
+    --body-large-line-height: var(--line-height-415);
+    --body-large-letter-spacing: var(--letter-spacing-200);
+
+    --body-default-font-size: var(--font-size-20);
+    --body-default-line-height: var(--line-height-280);
+    --body-default-letter-spacing: var(--letter-spacing-100);
+
+    --label-large-font-size: var(--font-size-24);
+    --label-large-line-height: var(--line-height-280);
+    --label-large-letter-spacing: var(--letter-spacing-300);
+
+    --label-default-font-size: var(--font-size-20);
+    --label-default-line-height: var(--line-height-280);
+    --label-default-letter-spacing: var(--letter-spacing-100);
+
+    --label-small-font-size: var(--font-size-15);
+    --label-small-line-height: var(--line-height-210);
+    --label-small-letter-spacing: var(--letter-spacing-100);
+
+    --label-caption-font-size: var(--font-size-16);
+    --label-caption-line-height: var(--line-height-190);
+    --label-caption-letter-spacing: var(--letter-spacing-100);
+
+    --gap-200: var(--space-16);
+    --gap-300: var(--space-20);
+    --gap-400: var(--space-32);
+    --gap-500: var(--space-48);
+    --gap-600: var(--space-64);
+    --gap-700: var(--space-80);
+    --gap-800: var(--space-172);
+    --gap-900: var(--space-200);
+
+    --padding-horizontal: var(--space-240);
+    --padding-top: var(--space-200);
+    --padding-bottom: var(--space-200);
+  }
+}
+
+/* =========================================
+   TAILWIND THEME BINDINGS
+========================================= */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+}
+
+/* =========================================
+   BASE
+========================================= */
+
+@layer base {
+  * {
+    @apply border-border outline-none;
+  }
+
+  html {
+    font-size: var(--font-size-root);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-family-inter);
+  }
+}
+
+/* =========================================
+   TYPOGRAPHY UTILITIES
+========================================= */
+
+@layer utilities {
+  .typo-hero-large {
+    font-family: var(--hero-large-font-family);
+    font-size: var(--hero-large-font-size);
+    line-height: var(--hero-large-line-height);
+    letter-spacing: var(--hero-large-letter-spacing);
+    font-weight: var(--hero-large-font-weight);
+  }
+
+  .typo-hero-default {
+    font-family: var(--hero-default-font-family);
+    font-size: var(--hero-default-font-size);
+    line-height: var(--hero-default-line-height);
+    letter-spacing: var(--hero-default-letter-spacing);
+    font-weight: var(--hero-default-font-weight);
+  }
+
+  .typo-h-large {
+    font-family: var(--h-large-font-family);
+    font-size: var(--h-large-font-size);
+    line-height: var(--h-large-line-height);
+    letter-spacing: var(--h-large-letter-spacing);
+    font-weight: var(--h-large-font-weight);
+  }
+
+  .typo-h-default {
+    font-family: var(--h-default-font-family);
+    font-size: var(--h-default-font-size);
+    line-height: var(--h-default-line-height);
+    letter-spacing: var(--h-default-letter-spacing);
+    font-weight: var(--h-default-font-weight);
+  }
+
+  .typo-h-small {
+    font-family: var(--h-small-font-family);
+    font-size: var(--h-small-font-size);
+    line-height: var(--h-small-line-height);
+    letter-spacing: var(--h-small-letter-spacing);
+    font-weight: var(--h-small-font-weight);
+  }
+
+  .typo-subtitle-large {
+    font-family: var(--subtitle-large-font-family);
+    font-size: var(--subtitle-large-font-size);
+    line-height: var(--subtitle-large-line-height);
+    letter-spacing: var(--subtitle-large-letter-spacing);
+    font-weight: var(--subtitle-large-font-weight);
+  }
+
+  .typo-body-large {
+    font-family: var(--body-large-font-family);
+    font-size: var(--body-large-font-size);
+    line-height: var(--body-large-line-height);
+    letter-spacing: var(--body-large-letter-spacing);
+    font-weight: var(--body-large-font-weight);
+  }
+
+  .typo-body-default {
+    font-family: var(--body-default-font-family);
+    font-size: var(--body-default-font-size);
+    line-height: var(--body-default-line-height);
+    letter-spacing: var(--body-default-letter-spacing);
+    font-weight: var(--body-default-font-weight);
+  }
+
+  .typo-label-large {
+    font-family: var(--label-large-font-family);
+    font-size: var(--label-large-font-size);
+    line-height: var(--label-large-line-height);
+    letter-spacing: var(--label-large-letter-spacing);
+    font-weight: var(--label-large-font-weight);
+  }
+
+  .typo-label-default {
+    font-family: var(--label-default-font-family);
+    font-size: var(--label-default-font-size);
+    line-height: var(--label-default-line-height);
+    letter-spacing: var(--label-default-letter-spacing);
+    font-weight: var(--label-default-font-weight);
+  }
+
+  .typo-label-small {
+    font-family: var(--label-small-font-family);
+    font-size: var(--label-small-font-size);
+    line-height: var(--label-small-line-height);
+    letter-spacing: var(--label-small-letter-spacing);
+    font-weight: var(--label-small-font-weight);
+  }
+
+  .typo-label-caption {
+    font-family: var(--label-caption-font-family);
+    font-size: var(--label-caption-font-size);
+    line-height: var(--label-caption-line-height);
+    letter-spacing: var(--label-caption-letter-spacing);
+    font-weight: var(--label-caption-font-weight);
+  }
+}
