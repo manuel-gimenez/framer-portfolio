@@ -131,7 +131,7 @@ components and overrides into one list.
 | **Status** | done |
 | **Pattern** | A — Demo + CodeConsole |
 | **Structure** | Label `Components` once → H2 **Code components** → cards for TextScrambler, LottieScroll (+ ComponentPreview demos) |
-| **Items** | See `snippets/` and [`../../02-components/code-components/`](../../02-components/code-components/) |
+| **Items** | [`../../02-components/code-components/`](../../02-components/code-components/) and [`../../02-components/code-overrides/`](../../02-components/code-overrides/) |
 
 ### Code overrides — `done`
 

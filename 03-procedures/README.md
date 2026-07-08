@@ -9,5 +9,6 @@ unstuck. Maps to the **PROCEDURES** block on the System page.
 | [`skills/`](./skills/) | Problem-solving playbooks (e.g. escape-hatch) |
 
 **Cursor IDE:** [`.cursor/rules`](../.cursor/rules) and
-[`.cursor/skills`](../.cursor/skills) are symlinks here so the assistant loads
-them automatically. Edit files in **this folder** — not duplicates elsewhere.
+[`.cursor/skills`](../.cursor/skills) are **symlinks** to this folder. Cursor
+only auto-loads rules from `.cursor/rules/` — so we keep one copy here and
+symlink it. **Edit files in `03-procedures/`** (or via the symlink — same file).

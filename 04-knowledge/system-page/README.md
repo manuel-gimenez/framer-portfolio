@@ -185,18 +185,18 @@ Each item = **demo card** (stack or 2-column on desktop).
 │  Override name + one-line description        │
 ├────────────────────┬─────────────────────────┤
 │  Live demo         │  CodeConsole            │
-│  (if applicable)   │  (paste snippet)        │
+│  (if applicable)   │  (paste from 02-components) │
 └────────────────────┴─────────────────────────┘
 ```
 
 ### Items
 
-| Override | Live demo | Console snippet | Notes |
+| Override | Live demo | Source file | Notes |
 | --- | --- | --- | --- |
-| `CopyEmail` | Yes — button with override applied; click to copy | [`snippets/CopyEmail.tsx`](./snippets/CopyEmail.tsx) | Working demo |
-| `MobileComingSoon` | Console only | [`snippets/MobileComingSoon.tsx`](./snippets/MobileComingSoon.tsx) | Needs nav context + mobile width |
-| `ClosePhoneNavOnSectionLink` | Console only | [`snippets/ClosePhoneNavOnSectionLink.tsx`](./snippets/ClosePhoneNavOnSectionLink.tsx) | **Superseded** — solved natively; show as reference |
-| `LottieAspectOverrides` | Console only | [`snippets/LottieAspectOverrides.tsx`](./snippets/LottieAspectOverrides.tsx) | **Superseded** by `LottieScroll` |
+| `CopyEmail` | Yes — button with override applied; click to copy | [`CopyEmail.tsx`](../../02-components/code-overrides/CopyEmail.tsx) | Working demo |
+| `MobileComingSoon` | Console only | [`MobileComingSoon.tsx`](../../02-components/code-overrides/MobileComingSoon.tsx) | Needs nav context + mobile width |
+| `ClosePhoneNavOnSectionLink` | Console only | [`ClosePhoneNavOnSectionLink.tsx`](../../02-components/code-overrides/ClosePhoneNavOnSectionLink.tsx) | **Superseded** — solved natively; show as reference |
+| `LottieAspectOverrides` | Console only | [`LottieAspectOverrides.tsx`](../../02-components/code-overrides/LottieAspectOverrides.tsx) | **Superseded** by `LottieScroll` |
 
 For superseded overrides, add a short note: "Replaced by native interaction" or
 "Replaced by `LottieScroll`" — see [`../why-native-first.md`](../why-native-first.md).
@@ -205,10 +205,10 @@ For superseded overrides, add a short note: "Replaced by native interaction" or
 
 ## 6. Components
 
-| Component | Live demo | Console snippet |
+| Component | Live demo | Source file |
 | --- | --- | --- |
-| `TextScrambler` | Yes — drop instance, set trigger to On Hover or On Click | [`snippets/TextScrambler.tsx`](./snippets/TextScrambler.tsx) |
-| `LottieScroll` | Yes — drop instance, upload a `Cover-*-clean.json` | [`snippets/LottieScroll.tsx`](./snippets/LottieScroll.tsx) |
+| `TextScrambler` | Yes — drop instance, set trigger to On Hover or On Click | [`TextScrambler.tsx`](../../02-components/code-components/TextScrambler.tsx) |
+| `LottieScroll` | Yes — drop instance, upload a `Cover-*-clean.json` | [`LottieScroll.tsx`](../../02-components/code-components/LottieScroll.tsx) |
 
 ### Framer-native components
 
@@ -231,8 +231,8 @@ Import [`../../02-components/code-components/CodeConsole.tsx`](../../02-componen
 
 | Property | What to set |
 | --- | --- |
-| **Code** | Paste full contents from the matching `snippets/*.tsx` file |
-| **Language** | `TSX` for all `.tsx` snippets |
+| **Code** | Paste full contents from the matching file in `02-components/code-components/` or `02-components/code-overrides/` |
+| **Language** | `TSX` |
 | **Title** | Filename, e.g. `CopyEmail.tsx` |
 | **Copy** | Show |
 | **Theme** | Light (match portfolio; switch to Dark if you add dark mode later) |
