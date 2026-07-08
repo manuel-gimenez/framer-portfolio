@@ -1,3 +1,21 @@
+/**
+ * LottieAspectOverrides — wrap Dot Lottie to trim letterbox via aspect-ratio height.
+ *
+ * Status: 🔴 Deprecated — superseded by LottieScroll; not on the live site.
+ *
+ * Problem it solves: the earlier attempt at the padding/letterbox problem by
+ * wrapping Framer's Dot Lottie and computing height from each animation's
+ * aspect ratio. It works partially but can't reach the part that creates the
+ * letterbox — superseded by LottieScroll.tsx.
+ *
+ * Usage: reference only; kept as the honest "before" in the escape-hatch story.
+ * Was applied to Dot Lottie instances on project cover sections (abandoned).
+ *
+ * Changelog
+ *   v1.0.1 (08-07-2026) — Add 🔴 Deprecated status line.
+ *   v1.0.0 (30-06-2026) — Initial version (superseded by LottieScroll).
+ */
+
 import {
     forwardRef,
     ComponentType,
@@ -5,23 +23,6 @@ import {
     useRef,
     useState,
 } from "react"
-
-/**
- * LottieAspectOverrides — the earlier "wrap the existing component" attempt at
- * the padding/letterbox problem.
- *
- * These overrides wrap Framer's Dot Lottie component and compute the height
- * from each animation's aspect ratio to trim the black letterbox. It works, but
- * it can't reach the part of that component that creates the letterbox, so the
- * problem was never fully solved here. That dead end is what led to building a
- * self-contained player from scratch (see ../components/LottieScroll.tsx) and to
- * extracting the escape-hatch skill (see ../skills/escape-hatch).
- *
- * Kept on purpose as the honest "before" in that story.
- *
- * Changelog
- *   v1.0.0 (30-06-2026) — Initial version (superseded by LottieScroll).
- */
 
 // Intrinsic animation ratios (height / width).
 const GUEST_RATIO = 220 / 684

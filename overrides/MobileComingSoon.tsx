@@ -1,7 +1,7 @@
-import { forwardRef, type ComponentType, useState } from "react"
-
 /**
  * MobileComingSoon — mobile "coming soon" reveal override for Framer.
+ *
+ * Status: 🟢 Live — AI LAB nav item (mobile tap scramble).
  *
  * Problem it solves: the "AI LAB" navigation item is a project that isn't live
  * yet. On desktop, a custom cursor (with the scramble effect) reveals "COMING
@@ -14,8 +14,12 @@ import { forwardRef, type ComponentType, useState } from "react"
  * desktop custom cursor + TextScrambler. Label is driven by the `label` prop.
  *
  * Changelog
+ *   v1.0.1 (08-07-2026) — Add 🟢 Live status line.
  *   v1.0.0 (30-06-2026) — Initial version.
  */
+
+import { forwardRef, type ComponentType, useState } from "react"
+
 const finalText = "COMING SOON"
 const originalText = "AI LAB"
 const chars = "AI<>[]{}01#*"

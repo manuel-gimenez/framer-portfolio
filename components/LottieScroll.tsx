@@ -1,25 +1,28 @@
-import { useEffect, useRef, useState } from "react"
-import { addPropertyControls, ControlType } from "framer"
-import lottie from "lottie-web"
-
 /**
- * LottieScroll — a self-contained Lottie player for Framer.
+ * LottieScroll — self-contained Lottie player for Framer.
  *
- * Why this exists (replaces the Dot Lottie component):
- *  - Full fit control (contain / cover / fill) so there is NEVER a black
- *    letterbox/backdrop area, regardless of the frame's shape.
- *  - No LottieFiles dependency.
- *  - Plays once when scrolled into view (top-edge trigger, height-independent).
+ * Status: 🟢 Live — project cover hero animations.
  *
- * Supply the animation with the "JSON file" control (upload a
- * Cover-*-clean.json) or the "JSON URL" control.
+ * Problem it solves: Framer's Dot Lottie component couldn't trim black
+ * letterbox/padding around animations. This player gives full fit control
+ * (contain / cover / fill), no LottieFiles dependency, and plays once when
+ * scrolled into view.
+ *
+ * Usage: hero cover animations on project pages; upload a Cover-*-clean.json
+ * or pass a JSON URL via property controls.
  *
  * Changelog
+ *   v1.0.1 (08-07-2026) — Add 🟢 Live status line.
  *   v1.0.0 (30-06-2026) — Initial version: replaces the Dot Lottie component.
  *
  * @framerSupportedLayoutWidth any
  * @framerSupportedLayoutHeight any
  */
+
+import { useEffect, useRef, useState } from "react"
+import { addPropertyControls, ControlType } from "framer"
+import lottie from "lottie-web"
+
 export default function LottieScroll(props) {
     const { file, url, fit, trigger, timingMode, speed, duration, triggerLine } =
         props

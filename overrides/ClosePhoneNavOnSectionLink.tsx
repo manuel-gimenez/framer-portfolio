@@ -1,3 +1,30 @@
+/**
+ * ClosePhoneNavOnSectionLink — auto-close the mobile nav after in-page scroll links.
+ *
+ * Status: 🔴 Deprecated — not on the live site; native Set Variant ships.
+ *
+ * Problem it solves: on the nav-bar "Phone open" variant, tapping a link that
+ * scrolls to a section on the SAME page (e.g. WORK on home, CONTACT anywhere)
+ * left the menu open when scrolling back up. Any same-page section link should
+ * dismiss the menu after tap.
+ *
+ * Usage (abandoned): applied to the nav-bar instance; tried to detect taps on
+ * menu links and force the closed variant via a Framer store. Superseded — kept
+ * as a reference, NOT used on the live site. Forcing `variant` from an override
+ * does not work when the nav-bar owns its variant through internal interactions.
+ * Shipped fix: native On Click → Set Variant "Phone closed" on WORK / CONTACT.
+ * See ../docs/why-native-first.md.
+ *
+ * Changelog
+ *   v1.0.4 (08-07-2026) — Add 🔴 Deprecated status line.
+ *   v1.0.3 (30-06-2026) — Marked superseded; solved natively (On Click → Set
+ *     Variant). Kept as a reference example for the native-first rule.
+ *   v1.0.2 (30-06-2026) — Capture-phase listeners + Framer store; still could not
+ *     beat the component's internal variant state.
+ *   v1.0.1 (30-06-2026) — Generalized: close on any same-page section link.
+ *   v1.0.0 (30-06-2026) — Initial version.
+ */
+
 import {
     forwardRef,
     useCallback,
@@ -6,32 +33,6 @@ import {
     type ComponentType,
 } from "react"
 import { createStore } from "https://framer.com/m/framer/store.js@^1.0.0"
-
-/**
- * ClosePhoneNavOnSectionLink — auto-close the mobile nav after in-page scroll links.
- *
- * Problem it solves: on the nav-bar "Phone open" variant, tapping a link that
- * scrolls to a section on the SAME page (e.g. WORK on home, CONTACT anywhere)
- * left the menu open when scrolling back up. Any same-page section link should
- * dismiss the menu after tap.
- *
- * STATUS: superseded — kept as a reference, NOT used on the live site. Forcing
- * the nav's `variant` from an override does not work: the nav-bar owns its
- * variant through internal interactions, so the prop can't win. The shipped fix
- * is a NATIVE Framer interaction (On Click → Set Variant "Phone closed") on the
- * WORK / CONTACT links. See ../docs/why-native-first.md for the full story.
- *
- * Usage (abandoned approach): applied to the nav-bar instance; tried to detect
- * taps on menu links and force the closed variant via a Framer store.
- *
- * Changelog
- *   v1.0.3 (30-06-2026) — Marked superseded; solved natively (On Click → Set
- *     Variant). Kept as a reference example for the native-first rule.
- *   v1.0.2 (30-06-2026) — Capture-phase listeners + Framer store; still could not
- *     beat the component's internal variant state.
- *   v1.0.1 (30-06-2026) — Generalized: close on any same-page section link.
- *   v1.0.0 (30-06-2026) — Initial version.
- */
 
 const VARIANT_CLOSED = "Phone closed"
 const MOBILE_MAX_WIDTH = 768

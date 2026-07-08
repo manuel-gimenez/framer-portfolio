@@ -1,7 +1,7 @@
-import { forwardRef, type ComponentType } from "react"
-
 /**
  * CopyEmail — click-to-copy email override for Framer.
+ *
+ * Status: 🟢 Live — footer Contact button.
  *
  * Problem it solves: the footer "Contact" button shouldn't force a `mailto:`
  * that opens a mail client the visitor may not have set up. Instead, clicking
@@ -12,8 +12,12 @@ import { forwardRef, type ComponentType } from "react"
  * Usage: applied to the footer Contact button.
  *
  * Changelog
+ *   v1.0.1 (08-07-2026) — Add 🟢 Live status line.
  *   v1.0.0 (30-06-2026) — Initial version.
  */
+
+import { forwardRef, type ComponentType } from "react"
+
 export function CopyEmail(Component): ComponentType {
     return forwardRef((props, ref) => {
         return (

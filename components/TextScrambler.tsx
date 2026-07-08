@@ -1,3 +1,27 @@
+/**
+ * TextScrambler — animated character-scramble text component for Framer.
+ *
+ * Status: 🟢 Live — AI LAB nav label (desktop custom-cursor reveal).
+ *
+ * Problem it solves: the "AI LAB" project (coming soon) needed a label/nav
+ * treatment that felt on-brand for an AI page. Random characters resolve into
+ * the target word for a techy "decoding" reveal. On desktop it's paired with
+ * the custom "coming soon" cursor on the AI LAB navigation item.
+ *
+ * Usage: AI LAB nav label and any inline text needing a decode animation;
+ * trigger, play mode, duration, charset, color, and font are configurable.
+ *
+ * Changelog
+ *   v1.0.1 (08-07-2026) — Add 🟢 Live status line.
+ *   v1.0.0 (30-06-2026) — Initial version.
+ *
+ * @framerIntrinsicWidth 240
+ * @framerIntrinsicHeight 28
+ *
+ * @framerSupportedLayoutWidth auto
+ * @framerSupportedLayoutHeight auto
+ */
+
 import React, {
     useCallback,
     useEffect,
@@ -71,27 +95,6 @@ function buildFrame(
     return out
 }
 
-/**
- * TextScrambler — animated character-scramble text component for Framer.
- *
- * Problem it solves: the "AI LAB" project (coming soon) needed a label/nav
- * treatment that felt on-brand for an AI page. This resolves random characters
- * into the target word for a techy "decoding" reveal. On desktop it's paired
- * with the custom "coming soon" cursor on the AI LAB navigation item.
- *
- * Reusable: trigger (appear / hover / click / manual), play mode (once / loop),
- * duration, stagger, FPS, charset, color, and font are all configurable, with a
- * static-render fallback and IntersectionObserver gating.
- *
- * Changelog
- *   v1.0.0 (30-06-2026) — Initial version.
- *
- * @framerIntrinsicWidth 240
- * @framerIntrinsicHeight 28
- *
- * @framerSupportedLayoutWidth auto
- * @framerSupportedLayoutHeight auto
- */
 export default function TextScrambler(props: TextScramblerProps) {
     const {
         text = "COMING SOON",
