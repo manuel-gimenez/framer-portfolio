@@ -1,7 +1,10 @@
 # Debt & tradeoffs
 
-Tracked shortcuts, blocked work, and reference-only code. Pair with the **status
-lights** in each file header (`🟢` / `🟡` / `🔴`).
+Tracked shortcuts, **blocked or paused code**, and reference-only implementations.
+Pair with **status lights** in each file header (`🟢` / `🟡` / `🔴`).
+
+**Future work that is not debt** (new sections, skills, polish) lives in
+[`backlog.md`](./backlog.md).
 
 ## Status lights
 

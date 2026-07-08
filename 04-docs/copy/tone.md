@@ -11,9 +11,7 @@ Reference for subtitles and body copy on the **System** page (and similar docs).
 3. **Human check always** — AI drafts are a starting point; you review and we
    iterate together until the line reads right in Framer.
 
-A Cursor **skill** is not needed yet. Revisit when you have ~8+ sections of
-copy and ask for subtitles often; until then this doc + “match `tone.md`” in
-chat is enough. Optional later: `03-procedures/skills/copy-tone/`.
+For deferred copy workflow (e.g. a Cursor skill), see [`../backlog.md`](../backlog.md).
 
 ---
 

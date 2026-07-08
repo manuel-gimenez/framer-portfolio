@@ -7,7 +7,8 @@ System page — build that in Framer.
 
 | Doc | Purpose |
 | --- | --- |
-| [`debt.md`](./debt.md) | Open technical debt, code inventory + status lights |
+| [`backlog.md`](./backlog.md) | Future work by area (foundations, components, procedures, docs) |
+| [`debt.md`](./debt.md) | Blocked/paused code, status-light inventory |
 | [`why-native-first.md`](./why-native-first.md) | Prefer Framer native before code |
 | [`design-process/`](./design-process/) | Short workflow when starting a new page or section |
 | [`copy/`](./copy/) | Tone of voice + approved System page subtitles |
