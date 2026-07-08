@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<!--
+  System page — visual reference / concept.
+
+  Problem it solves: a browsable mockup of how the portfolio "System" page could
+  be structured across three sections (Foundation, Components, Next steps), built
+  with the real design tokens so it reads as Manuel's system, not a generic one.
+  Usage: open in a browser as a research reference. NOT the Framer build; the
+  Framer page is built natively per docs/system-page/README.md.
+
+  Changelog
+    v1.0.0 (02-07-2026) — Initial concept reference.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design System — concept reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ===== Tokens (from docs/design-system) ===== */
+  :root {
+    --bg: #ffffff;
+    --fg: #212121;
+    --border: #e9e9e9;
+    --surface: #fafafa;
+    --text-primary: #212121;
+    --text-secondary: #414141;
+    --text-tertiary: #778877;
+
+    --gray-100: #ffffff;
+    --gray-200: #fafafa;
+    --gray-400: #e9e9e9;
+    --gray-600: #778877;
+    --gray-800: #414141;
+    --gray-900: #212121;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-pill: 999px;
+
+    --pad-x: 16px;
+    --pad-y: 40px;
+    --content-max: 760px;
+
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --pad-x: 48px;
+      --pad-y: 96px;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    color: var(--text-primary);
+    background: var(--bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 var(--pad-x);
+  }
+
+  /* ===== Sticky nav ===== */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 12px var(--pad-x);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .nav-brand {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+
+  /* ===== Header ===== */
+  header.page {
+    padding: var(--pad-y) 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+  }
+  h1.hero {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+  @media (min-width: 768px) {
+    h1.hero { font-size: 88px; letter-spacing: -3px; }
+  }
+  .lede {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 46ch;
+  }
+
+  /* ===== Section scaffolding ===== */
+  section.block {
+    padding: var(--pad-y) 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 64px;
+  }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .section-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+  }
+  h2.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  @media (min-width: 768px) {
+    h2.section-title { font-size: 48px; letter-spacing: -1px; }
+  }
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 16px;
+    max-width: 52ch;
+    margin-bottom: 40px;
+  }
+
+  h3.sub {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    margin: 40px 0 4px;
+  }
+  .sub-desc {
+    color: var(--text-tertiary);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .sub-first { margin-top: 0; }
+
+  /* ===== Colors ===== */
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (min-width: 768px) {
+    .swatch-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .swatch {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .swatch .fill { height: 88px; }
+  .swatch .meta { padding: 12px 14px; }
+  .swatch .name { font-size: 14px; font-weight: 600; }
+  .swatch .hex {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+    margin-top: 2px;
+  }
+  .swatch .note { font-size: 11px; color: var(--text-tertiary); margin-top: 4px; }
+
+  /* ===== Typography specimens ===== */
+  .type-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+  }
+  @media (min-width: 768px) {
+    .type-row {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+    }
+  }
+  .type-sample { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .type-meta {
+    display: flex;
+    gap: 16px;
+    flex-shrink: 0;
+    align-items: baseline;
+  }
+  .type-name { font-size: 13px; font-weight: 600; }
+  .type-specs {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+  }
+  .t-hero { font-size: 40px; font-weight: 700; letter-spacing: -1px; }
+  .t-h-large { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; }
+  .t-h-default { font-size: 24px; font-weight: 600; }
+  .t-subtitle { font-size: 18px; font-weight: 500; }
+  .t-body { font-size: 18px; font-weight: 400; }
+  .t-body-d { font-size: 16px; font-weight: 400; }
+  .t-label { font-size: 16px; font-weight: 700; }
+  .t-caption { font-size: 12px; font-weight: 400; color: var(--text-secondary); }
+
+  /* ===== Spacing ===== */
+  .bars { display: flex; flex-direction: column; gap: 12px; }
+  .bar-row { display: flex; align-items: center; gap: 12px; }
+  .bar {
+    height: 10px;
+    background: var(--text-primary);
+    border-radius: var(--radius-pill);
+  }
+  .bar-label {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+    width: 42px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  /* ===== Radius ===== */
+  .radius-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .radius-item { text-align: center; }
+  .radius-box {
+    width: 88px;
+    height: 88px;
+    background: var(--surface);
+    border: 1.5px solid var(--fg);
+  }
+  .radius-name { font-size: 13px; font-weight: 600; margin-top: 10px; }
+  .radius-use { font-size: 11px; color: var(--text-tertiary); }
+
+  /* ===== Component demo cards ===== */
+  .cards { display: grid; gap: 20px; }
+  @media (min-width: 768px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head { padding: 18px 18px 0; }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-sub { font-size: 13px; color: var(--text-tertiary); margin-top: 4px; }
+  .card-demo {
+    padding: 24px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    background: var(--surface);
+    margin: 16px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border);
+  }
+  .badge.live { color: #2f7d4f; border-color: #cbe6d5; background: #f2fbf5; }
+  .badge.ref { color: var(--text-tertiary); }
+
+  /* fake console */
+  .console {
+    margin: 0 18px 18px;
+    border-radius: var(--radius-lg);
+    background: #1b1b1b;
+    overflow: hidden;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .console-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #262626;
+  }
+  .console-file { font-size: 11px; color: #bdbdbd; }
+  .console-copy { font-size: 11px; color: #7a7a7a; }
+  .console pre {
+    padding: 12px;
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: #e6e6e6;
+    overflow-x: auto;
+  }
+  .console .k { color: #c792ea; }
+  .console .s { color: #c3e88d; }
+  .console .c { color: #616161; }
+  .console .f { color: #82aaff; }
+
+  /* demo button */
+  .demo-btn {
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--fg);
+    background: var(--fg);
+    color: #fff;
+    cursor: pointer;
+  }
+  .demo-scramble {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+
+  /* ===== Next steps roadmap ===== */
+  .road-group { margin-top: 40px; }
+  .road-group:first-child { margin-top: 0; }
+  .road-group-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+  }
+  .road-list { list-style: none; display: grid; gap: 10px; }
+  @media (min-width: 768px) {
+    .road-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  .road-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg);
+  }
+  .road-item .dot {
+    width: 18px; height: 18px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: var(--text-tertiary);
+  }
+  .road-item.done .dot {
+    background: var(--fg);
+    border-color: var(--fg);
+    color: #fff;
+  }
+  .road-item .rlabel { font-size: 15px; font-weight: 500; }
+  .road-item .rstatus {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    padding: 48px 0 80px;
+    color: var(--text-tertiary);
+    font-size: 13px;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+
+  .callout {
+    margin-top: 24px;
+    padding: 16px 18px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">Manuel Giménez — System</span>
+    <ul class="nav-links">
+      <li><a href="#foundation">Foundation</a></li>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#next">Next steps</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page">
+    <p class="eyebrow">Design System</p>
+    <h1 class="hero">A system, in the open.</h1>
+    <p class="lede">The tokens, components, and code powering this portfolio — plus what's coming next. Built native-first in Framer.</p>
+  </header>
+
+  <!-- ============ 1. FOUNDATION ============ -->
+  <section class="block" id="foundation">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Foundation</h2>
+    </div>
+    <p class="section-desc">The primitives everything is built from. Semantic tokens, transcribed from the original Figma Make export and rebuilt as Framer styles.</p>
+
+    <!-- Colors -->
+    <h3 class="sub sub-first">Colors</h3>
+    <p class="sub-desc">Semantic color styles. Note <code>text/tertiary</code> is a muted green, not a gray.</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="fill" style="background:#ffffff;border-bottom:1px solid var(--border)"></div><div class="meta"><div class="name">background</div><div class="hex">#FFFFFF</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#212121"></div><div class="meta"><div class="name">foreground</div><div class="hex">#212121</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#fafafa;border-bottom:1px solid var(--border)"></div><div class="meta"><div class="name">surface/bg</div><div class="hex">#FAFAFA</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#e9e9e9"></div><div class="meta"><div class="name">border</div><div class="hex">#E9E9E9</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#212121"></div><div class="meta"><div class="name">text/primary</div><div class="hex">#212121</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#414141"></div><div class="meta"><div class="name">text/secondary</div><div class="hex">#414141</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#778877"></div><div class="meta"><div class="name">text/tertiary</div><div class="hex">#778877</div><div class="note">muted green</div></div></div>
+      <div class="swatch"><div class="fill" style="background:#ffffff;border-bottom:1px solid var(--border)"></div><div class="meta"><div class="name">surface/bg-white</div><div class="hex">#FFFFFF</div></div></div>
+    </div>
+
+    <!-- Typography -->
+    <h3 class="sub">Typography</h3>
+    <p class="sub-desc">Inter, 400–700. Each row: sample · style name · mobile / desktop metrics (size / line / tracking).</p>
+    <div>
+      <div class="type-row"><span class="type-sample t-hero">Design that ships</span><span class="type-meta"><span class="type-name">hero-large</span><span class="type-specs">48/52/-1 · 164/148/-4</span></span></div>
+      <div class="type-row"><span class="type-sample t-h-large">Foundations</span><span class="type-meta"><span class="type-name">h-large</span><span class="type-specs">32/38/-0.5 · 48/58/-1</span></span></div>
+      <div class="type-row"><span class="type-sample t-h-default">Section heading</span><span class="type-meta"><span class="type-name">h-default</span><span class="type-specs">24/26 · 28/36.5</span></span></div>
+      <div class="type-row"><span class="type-sample t-subtitle">A supporting subtitle line</span><span class="type-meta"><span class="type-name">subtitle-large</span><span class="type-specs">18/26 · 28/33.6</span></span></div>
+      <div class="type-row"><span class="type-sample t-body">Body copy for reading comfortably.</span><span class="type-meta"><span class="type-name">body-large</span><span class="type-specs">18/26 · 32/41.5</span></span></div>
+      <div class="type-row"><span class="type-sample t-body-d">Default body text used across the site.</span><span class="type-meta"><span class="type-name">body-default</span><span class="type-specs">16/24 · 20/28</span></span></div>
+      <div class="type-row"><span class="type-sample t-label">LABEL LARGE</span><span class="type-meta"><span class="type-name">label-large</span><span class="type-specs">16/22 · 24/28</span></span></div>
+      <div class="type-row"><span class="type-sample t-caption">label-caption — smallest supporting text</span><span class="type-meta"><span class="type-name">label-caption</span><span class="type-specs">12/16 · 16/19</span></span></div>
+    </div>
+    <p class="sub-desc" style="margin-top:16px">Full scale (12 styles) documented in <code>docs/design-system/README.md</code>.</p>
+
+    <!-- Spacing -->
+    <h3 class="sub">Spacing</h3>
+    <p class="sub-desc">Primitive scale (px). Semantic gaps &amp; padding shift at the 768px breakpoint.</p>
+    <div class="bars">
+      <div class="bar-row"><span class="bar-label">16</span><div class="bar" style="width:16px"></div></div>
+      <div class="bar-row"><span class="bar-label">24</span><div class="bar" style="width:24px"></div></div>
+      <div class="bar-row"><span class="bar-label">32</span><div class="bar" style="width:32px"></div></div>
+      <div class="bar-row"><span class="bar-label">48</span><div class="bar" style="width:48px"></div></div>
+      <div class="bar-row"><span class="bar-label">64</span><div class="bar" style="width:64px"></div></div>
+      <div class="bar-row"><span class="bar-label">80</span><div class="bar" style="width:80px"></div></div>
+      <div class="bar-row"><span class="bar-label">172</span><div class="bar" style="width:172px"></div></div>
+      <div class="bar-row"><span class="bar-label">240</span><div class="bar" style="width:240px"></div></div>
+    </div>
+
+    <!-- Radius -->
+    <h3 class="sub">Radius</h3>
+    <p class="sub-desc">Applied to real surfaces across the site.</p>
+    <div class="radius-grid">
+      <div class="radius-item"><div class="radius-box" style="border-radius:4px"></div><div class="radius-name">sm · 4</div><div class="radius-use">chips</div></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:8px"></div><div class="radius-name">md · 8</div><div class="radius-use">buttons</div></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:12px"></div><div class="radius-name">lg · 12</div><div class="radius-use">console</div></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:16px"></div><div class="radius-name">xl · 16</div><div class="radius-use">cards</div></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:999px"></div><div class="radius-name">pill · 999</div><div class="radius-use">toasts</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 2. COMPONENTS ============ -->
+  <section class="block" id="components">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Components</h2>
+    </div>
+    <p class="section-desc">The code that Framer can't do natively — components and overrides — shown as a live demo paired with the source in a console.</p>
+
+    <h3 class="sub sub-first">Code components</h3>
+    <p class="sub-desc">Reusable code components dropped into Framer.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">TextScrambler <span class="badge live">Live</span></div>
+          <div class="card-sub">Scrambles text on hover, then settles.</div>
+        </div>
+        <div class="card-demo"><span class="demo-scramble" id="scramble">SYSTEM</span></div>
+        <div class="console">
+          <div class="console-bar"><span class="console-file">TextScrambler.tsx</span><span class="console-copy">Copy</span></div>
+<pre><span class="c">// scrambles on hover, resolves to target</span>
+<span class="k">export function</span> <span class="f">TextScrambler</span>(props) {
+  <span class="k">const</span> [text, setText] = useState(props.text)
+  <span class="c">// …runtime scramble loop</span>
+}</pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">LottieScroll <span class="badge live">Live</span></div>
+          <div class="card-sub">Drives a Lottie file from scroll position.</div>
+        </div>
+        <div class="card-demo">
+          <svg width="120" height="70" viewBox="0 0 120 70" fill="none">
+            <rect x="1" y="1" width="118" height="68" rx="8" stroke="#e9e9e9"/>
+            <path d="M10 55 Q40 10 60 35 T110 20" stroke="#778877" stroke-width="2" fill="none"/>
+            <circle cx="60" cy="35" r="4" fill="#212121"/>
+          </svg>
+        </div>
+        <div class="console">
+          <div class="console-bar"><span class="console-file">LottieScroll.tsx</span><span class="console-copy">Copy</span></div>
+<pre><span class="k">import</span> { useScroll } <span class="k">from</span> <span class="s">"framer-motion"</span>
+<span class="c">// map scrollYProgress → lottie frame</span>
+lottie.goToAndStop(progress * totalFrames)</pre>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub">Code overrides</h3>
+    <p class="sub-desc">Small behaviors attached to native elements. Superseded ones kept as honest references.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">CopyEmail <span class="badge live">Live</span></div>
+          <div class="card-sub">Copies email to clipboard, shows a pill toast.</div>
+        </div>
+        <div class="card-demo"><button class="demo-btn" id="copyBtn">Copy email</button></div>
+        <div class="console">
+          <div class="console-bar"><span class="console-file">CopyEmail.tsx</span><span class="console-copy">Copy</span></div>
+<pre><span class="k">const</span> withCopyEmail = (Component) => (props) => {
+  <span class="k">const</span> onClick = () =&gt; navigator.clipboard
+    .writeText(<span class="s">"hello@…"</span>)
+  <span class="k">return</span> &lt;Component onClick={onClick} /&gt;
+}</pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">ClosePhoneNavOnSectionLink <span class="badge ref">Superseded</span></div>
+          <div class="card-sub">Replaced by a native Set Variant interaction.</div>
+        </div>
+        <div class="card-demo">
+          <span style="font-size:13px;color:var(--text-tertiary);text-align:center;max-width:22ch">Kept as the "before" — see why-native-first.md</span>
+        </div>
+        <div class="console">
+          <div class="console-bar"><span class="console-file">ClosePhoneNavOnSectionLink.tsx</span><span class="console-copy">Copy</span></div>
+<pre><span class="c">// v1.0.2 — tried to force nav variant</span>
+<span class="c">// from an override. It never won.</span>
+<span class="c">// Native On Click → Set Variant did it.</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. NEXT STEPS ============ -->
+  <section class="block" id="next">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Next steps</h2>
+    </div>
+    <p class="section-desc">The roadmap, in the open. Filled squares are done; the rest are queued — grouped the same way the system is organised.</p>
+
+    <div class="road-group">
+      <div class="road-group-title">Foundation</div>
+      <ul class="road-list">
+        <li class="road-item done"><span class="dot">✓</span><span class="rlabel">Colors</span><span class="rstatus">Done</span></li>
+        <li class="road-item done"><span class="dot">✓</span><span class="rlabel">Typography</span><span class="rstatus">Done</span></li>
+        <li class="road-item done"><span class="dot">✓</span><span class="rlabel">Spacing</span><span class="rstatus">Done</span></li>
+        <li class="road-item done"><span class="dot">✓</span><span class="rlabel">Radius</span><span class="rstatus">Done</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Breakpoints</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Motion</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Layout</span><span class="rstatus">Next</span></li>
+      </ul>
+    </div>
+
+    <div class="road-group">
+      <div class="road-group-title">Components</div>
+      <ul class="road-list">
+        <li class="road-item done"><span class="dot">✓</span><span class="rlabel">Code components</span><span class="rstatus">Done</span></li>
+        <li class="road-item done"><span class="dot">✓</span><span class="rlabel">Code overrides</span><span class="rstatus">Done</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Custom cursor</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Footer</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Nav bar</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Site identity</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Menu item</span><span class="rstatus">Next</span></li>
+      </ul>
+    </div>
+
+    <div class="road-group">
+      <div class="road-group-title">Procedures</div>
+      <ul class="road-list">
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">Cursor skills</span><span class="rstatus">Next</span></li>
+        <li class="road-item"><span class="dot">···</span><span class="rlabel">AI workflows</span><span class="rstatus">Next</span></li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      This is a concept reference, not the final Framer build. Structure ideas &amp; patterns live in
+      <code>docs/system-page/visual-research.md</code>; the process lives in
+      <code>docs/design-process/README.md</code>.
+    </div>
+  </section>
+
+  <footer>
+    Concept reference for the System page · built with the portfolio's own tokens ·
+    <a href="https://www.jacobolenick.com/design-system/" target="_blank" rel="noopener">one inspiration among many</a>
+  </footer>
+
+</div>
+
+<script>
+  // tiny scramble demo
+  (function () {
+    const el = document.getElementById('scramble');
+    if (!el) return;
+    const target = 'SYSTEM';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#@$%';
+    let raf;
+    function scramble() {
+      let frame = 0;
+      cancelAnimationFrame(raf);
+      const tick = () => {
+        el.textContent = target
+          .split('')
+          .map((c, i) => (i < frame / 3 ? c : chars[Math.floor(Math.random() * chars.length)]))
+          .join('');
+        frame++;
+        if (frame / 3 < target.length) raf = requestAnimationFrame(tick);
+        else el.textContent = target;
+      };
+      tick();
+    }
+    el.parentElement.addEventListener('mouseenter', scramble);
+  })();
+
+  // copy email demo
+  (function () {
+    const btn = document.getElementById('copyBtn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const original = btn.textContent;
+      navigator.clipboard && navigator.clipboard.writeText('hello@manuelgimenez.com').catch(() => {});
+      btn.textContent = 'Copied ✓';
+      setTimeout(() => (btn.textContent = original), 1400);
+    });
+  })();
+</script>
+
+</body>
+</html>

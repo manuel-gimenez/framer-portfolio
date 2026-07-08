@@ -100,3 +100,21 @@ Format per cell: **size / line-height / letter-spacing** (all px).
 | `padding-horizontal` | 16 | 240 |
 | `padding-top` | 40 | 200 |
 | `padding-bottom` | 40 | 200 |
+
+---
+
+## Border radius
+
+No radius tokens existed in the original Figma Make export. This scale is
+proposed for the portfolio and the **System** page.
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `radius-sm` | `4px` | Tight chips, subtle rounding |
+| `radius-md` | `8px` | Buttons, small cards |
+| `radius-lg` | `12px` | Code console, medium cards |
+| `radius-xl` | `16px` | Section cards, larger surfaces |
+| `radius-pill` | `999px` | Toasts, pills, tags (e.g. CopyEmail toast) |
+
+Create these as plain values in Framer layouts (no formal Radius Styles panel).
+Show each on the System page as a labeled square with the matching corner radius.

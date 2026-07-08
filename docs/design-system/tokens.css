@@ -1,12 +1,11 @@
 /*
-  Design tokens — verbatim export from the Figma Make portfolio attempt.
+  Design tokens — source of truth for the portfolio design system.
 
-  Source of truth for the design system (colors, typography scale, spacing).
-  This file is a REFERENCE only — it is NOT loaded by the Framer site.
-  Tailwind v4 syntax (@theme, @custom-variant, @apply) — Figma Make output.
+  Reference only — NOT loaded by the Framer site.
+  Tailwind v4 syntax (@theme, @custom-variant, @apply) where applicable.
 
   To use in Framer:
-    - Colors      -> Framer Color Styles
+    - color-*     -> Framer Color Styles (primitives + semantics)
     - typo-*      -> Framer Text Styles (mobile + 768px desktop breakpoint)
     - spacing     -> values to reuse in layouts / breakpoints
   See README.md in this folder for a px-converted transcription table.
@@ -23,13 +22,21 @@
 :root {
   --font-size-root: 16px;
 
-  /* Color primitives */
-  --color-gray-100: #ffffff;
-  --color-gray-200: #fafafa;
-  --color-gray-400: #e9e9e9;
-  --color-gray-600: #778877;
-  --color-gray-800: #414141;
-  --color-gray-900: #212121;
+  /* Color primitives — gray */
+  --gray-100: #ffffff;
+  --gray-200: #f9f8f9;
+  --gray-300: #e9e9e9;
+  --gray-400: #f1ede6;
+  --gray-700: #757575;
+  --gray-800: #414141;
+  --gray-900: #212121;
+
+  /* Color primitives — blue (brand; shades derived in OKLCH) */
+  --blue-100: #f1f1fc;
+  --blue-300: #a2a4ed;
+  --blue-400: #3b41da;
+  --blue-600: #252ac1;
+  --blue-800: #1a1e8a;
 
   /* Typography primitives */
   --font-family-inter: 'Inter', sans-serif;
@@ -99,22 +106,32 @@
 }
 
 /* =========================================
-   SEMANTIC TOKENS — MOBILE BASE
+   SEMANTIC TOKENS — COLOR
 ========================================= */
 
 :root {
-  /* Colors */
-  --background: var(--color-gray-100);
-  --foreground: var(--color-gray-900);
-  --border: var(--color-gray-400);
+  /* Static — bg, fg, border */
+  --color-static-bg-1: var(--gray-100);
+  --color-static-bg-2: var(--gray-200);
+  --color-static-fg-1: var(--gray-900);
+  --color-static-fg-2: var(--gray-800);
+  --color-static-fg-3: var(--gray-700);
+  --color-static-fg-inverse: var(--gray-100);
+  --color-static-border: var(--gray-300);
 
-  --surface-surface-bg: var(--color-gray-200);
-  --surface-surface-bg-white: var(--color-gray-100);
+  /* Interactive — buttons, links, focus */
+  --color-interactive-bg-1-default: var(--gray-100);
+  --color-interactive-bg-1-hover: var(--gray-400);
+  --color-interactive-bg-2-default: var(--blue-400);
+  --color-interactive-bg-2-hover: #3b41dacc; /* blue-400 @ 80% */
+  --color-interactive-border-focus: var(--blue-400);
+}
 
-  --text-text-primary: var(--color-gray-900);
-  --text-text-secondary: var(--color-gray-800);
-  --text-text-tertiary: var(--color-gray-600);
+/* =========================================
+   SEMANTIC TOKENS — TYPOGRAPHY & SPACING (MOBILE BASE)
+========================================= */
 
+:root {
   /* Typography — mobile */
   --hero-large-font-family: var(--font-family-inter);
   --hero-large-font-weight: var(--font-weight-bold);
@@ -277,9 +294,9 @@
 ========================================= */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-border: var(--border);
+  --color-background: var(--color-static-bg-1);
+  --color-foreground: var(--color-static-fg-1);
+  --color-border: var(--color-static-border);
 }
 
 /* =========================================
