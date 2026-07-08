@@ -45,6 +45,7 @@ Inventory: [`04-docs/debt.md`](./04-docs/debt.md). Enforced by
 | Rules & skills | [`03-procedures/`](./03-procedures/) |
 | Native-first | [`04-docs/why-native-first.md`](./04-docs/why-native-first.md) |
 | Technical debt | [`04-docs/debt.md`](./04-docs/debt.md) |
+| Copy / tone | [`04-docs/copy/tone.md`](./04-docs/copy/tone.md) |
 
 ## The padding story
 
