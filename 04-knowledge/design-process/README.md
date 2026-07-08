@@ -47,7 +47,7 @@ per scope.
 2. For each section you need, note **one pattern you like** (layout, not colors).
 3. Screenshot or link; add a one-line note: *why this works for my site*.
 4. Cross-check against existing tokens in
-   [`../../foundations/README.md`](../../foundations/README.md) — don't invent
+   [`../../01-foundations/README.md`](../../01-foundations/README.md) — don't invent
    new values during research.
 
 **Stop when:** You can describe each section in one sentence (*"Colors = 2-col
@@ -56,7 +56,7 @@ swatch grid with hex under each swatch"*).
 **Cursor prompt template**
 
 > I'm designing [section name] for my System page. My tokens are in
-> `foundations/README.md`. Here are reference screenshots: [attach].
+> `01-foundations/README.md`. Here are reference screenshots: [attach].
 > Propose 2 layout structures that match my minimal editorial style. No final
 > design — wireframe-level only.
 
@@ -112,7 +112,7 @@ Full build steps: [`../system-page/README.md`](../system-page/README.md).
 1. Run the post-build checklist in
    [`../system-page/README.md`](../system-page/README.md#post-build-review-checklist).
 2. Mobile + desktop (≥768px) pass.
-3. Log changes in section briefs or [`foundations/README.md`](../../foundations/README.md) if tokens changed.
+3. Log changes in section briefs or [`01-foundations/README.md`](../../01-foundations/README.md) if tokens changed.
 
 **Stop when:** Checklist is green or issues are filed for a follow-up iteration.
 
@@ -126,7 +126,7 @@ Full build steps: [`../system-page/README.md`](../system-page/README.md).
 | [`../system-page/visual-research.md`](../system-page/visual-research.md) | Reference sites + section prompts |
 | [`../system-page/sections.md`](../system-page/sections.md) | Per-section structure briefs |
 | [`../system-page/README.md`](../system-page/README.md) | Framer build spec |
-| [`../../foundations/README.md`](../../foundations/README.md) | Token source of truth |
+| [`../../01-foundations/README.md`](../../01-foundations/README.md) | Token source of truth |
 
 ---
 

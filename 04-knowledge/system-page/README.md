@@ -7,7 +7,7 @@ Step-by-step guide for building the **System** design-system page on
 **You build natively in Framer.** Code in this repo supports only the parts Framer
 can't do natively: the `CodeConsole` component and live demos of existing code.
 
-Token values live in [`../../foundations/README.md`](../../foundations/README.md).
+Token values live in [`../../01-foundations/README.md`](../../01-foundations/README.md).
 
 **Process & research (start here for new sections)**
 
@@ -23,12 +23,12 @@ Token values live in [`../../foundations/README.md`](../../foundations/README.md
 
 ## Before you start
 
-1. Create Color Styles and Text Styles from [`foundations/README.md`](../../foundations/README.md) (if not done yet).
+1. Create Color Styles and Text Styles from [`01-foundations/README.md`](../../01-foundations/README.md) (if not done yet).
 2. Import into Framer:
-   - `components/CodeConsole.tsx`
-   - `components/TextScrambler.tsx`
-   - `components/LottieScroll.tsx`
-   - Overrides from `overrides/` (at minimum `CopyEmail`)
+   - `02-components/code-components/CodeConsole.tsx`
+   - `02-components/code-components/TextScrambler.tsx`
+   - `02-components/code-components/LottieScroll.tsx`
+   - Overrides from `02-components/code-overrides/` (at minimum `CopyEmail`)
 3. Add a new page: **System** (`/system`).
 
 ---
@@ -115,14 +115,14 @@ One row per text style. Each row shows:
 - Mobile values: size / line-height / letter-spacing
 - Desktop values (≥768px breakpoint)
 
-All 12 styles from [`foundations/README.md`](../../foundations/README.md):
+All 12 styles from [`01-foundations/README.md`](../../01-foundations/README.md):
 
 `hero-large`, `hero-default`, `h-large`, `h-default`, `h-small`,
 `subtitle-large`, `body-large`, `body-default`, `label-large`,
 `label-default`, `label-small`, `label-caption`
 
 Apply each as a Framer **Text Style** on the sample line. Override values on
-the Desktop breakpoint per the table in [`../../foundations/README.md`](../../foundations/README.md).
+the Desktop breakpoint per the table in [`../../01-foundations/README.md`](../../01-foundations/README.md).
 
 ---
 
@@ -160,7 +160,7 @@ Table or labeled bars for mobile → desktop:
 
 ## 4. Radius
 
-From [`../../foundations/README.md`](../../foundations/README.md#border-radius):
+From [`../../01-foundations/README.md`](../../01-foundations/README.md#border-radius):
 
 | Token | Value | Example use |
 | --- | --- | --- |
@@ -227,7 +227,7 @@ Suggested cards from the live site:
 
 ## CodeConsole setup
 
-Import [`../../components/CodeConsole.tsx`](../../components/CodeConsole.tsx) into Framer.
+Import [`../../02-components/code-components/CodeConsole.tsx`](../../02-components/code-components/CodeConsole.tsx) into Framer.
 
 | Property | What to set |
 | --- | --- |
@@ -264,7 +264,7 @@ Run through this after the page is assembled in Framer. If anything looks off,
 tweak in Framer first; only then ask to adjust `CodeConsole` styling in the repo.
 
 - [ ] Sticky nav scrolls to the correct section on click (all 6 links)
-- [ ] Color swatches match hex values in [`foundations/README.md`](../../foundations/README.md)
+- [ ] Color swatches match hex values in [`01-foundations/README.md`](../../01-foundations/README.md)
 - [ ] Typography samples use Text Styles (not one-off local styles)
 - [ ] Desktop breakpoint (≥768px) shows correct type + spacing values
 - [ ] `CopyEmail` demo copies email and shows toast
@@ -275,4 +275,4 @@ tweak in Framer first; only then ask to adjust `CodeConsole` styling in the repo
 - [ ] Page matches portfolio padding and visual tone on mobile and desktop
 
 If `CodeConsole` needs tweaks (colors, radius, font size), note what to change
-and update `components/CodeConsole.tsx` in this repo.
+and update `02-components/code-components/CodeConsole.tsx` in this repo.

@@ -11,24 +11,24 @@ lights** in each file header (`🟢` / `🟡` / `🔴`).
 | 🟡 **Not ready** | In progress, blocked, or paused | Do not rely on it; may be partial or untested end-to-end |
 | 🔴 **Deprecated** | Not on the live site | Superseded or abandoned; kept as reference only |
 
-Add a `Status:` line to every file in `components/`, `overrides/`, and
-`custom-code/` (see `.cursor/rules/code-header-convention.mdc`). When status is
-unclear, confirm with Manuel before marking 🟢 Live.
+Add a `Status:` line to every file in `02-components/` (see
+`03-procedures/rules/code-header-convention.mdc`). When status is unclear,
+confirm with Manuel before marking 🟢 Live.
 
 ## Inventory (code panel)
 
 | File | Type | Status |
 | --- | --- | --- |
-| `components/CodeConsole.tsx` | Component | 🟢 Live — System page |
-| `components/ChipText.tsx` | Component | 🟢 Live — System page |
-| `components/ComponentPreview.tsx` | Component | 🟢 Live — System page (scramble demos) |
-| `components/TextScrambler.tsx` | Component | 🟢 Live — AI LAB nav (desktop) |
-| `components/LottieScroll.tsx` | Component | 🟢 Live — project cover heroes |
-| `overrides/CopyEmail.tsx` | Override | 🟢 Live — footer Contact |
-| `overrides/MobileComingSoon.tsx` | Override | 🟢 Live — AI LAB nav (mobile) |
-| `overrides/CursorHoverSync.tsx` | Override | 🟡 🔧 Not ready — see below |
-| `overrides/ClosePhoneNavOnSectionLink.tsx` | Override | 🔴 Deprecated — native Set Variant ships |
-| `overrides/LottieAspectOverrides.tsx` | Override | 🔴 Deprecated — superseded by LottieScroll |
+| `02-components/code-components/CodeConsole.tsx` | Component | 🟢 Live — System page |
+| `02-components/code-components/ChipText.tsx` | Component | 🟢 Live — System page |
+| `02-components/code-components/ComponentPreview.tsx` | Component | 🟢 Live — System page (scramble demos) |
+| `02-components/code-components/TextScrambler.tsx` | Component | 🟢 Live — AI LAB nav (desktop) |
+| `02-components/code-components/LottieScroll.tsx` | Component | 🟢 Live — project cover heroes |
+| `02-components/code-overrides/CopyEmail.tsx` | Override | 🟢 Live — footer Contact |
+| `02-components/code-overrides/MobileComingSoon.tsx` | Override | 🟢 Live — AI LAB nav (mobile) |
+| `02-components/code-overrides/CursorHoverSync.tsx` | Override | 🟡 🔧 Not ready — see below |
+| `02-components/code-overrides/ClosePhoneNavOnSectionLink.tsx` | Override | 🔴 Deprecated — native Set Variant ships |
+| `02-components/code-overrides/LottieAspectOverrides.tsx` | Override | 🔴 Deprecated — superseded by LottieScroll |
 
 ---
 
@@ -55,10 +55,10 @@ links (SYSTEM, WORK, etc.).
 
 **Files involved**
 
-- `overrides/CursorHoverSync.tsx` — listener override (🟡 not ready; do not
-  apply on `cursor-custom` until resolved)
-- `components/ComponentPreview.tsx` — `cursorHover` / `cursorHoverVariant`
-  props (default **Off** until debt is closed)
+- `02-components/code-overrides/CursorHoverSync.tsx` — listener override (🟡 not
+  ready; do not apply on `cursor-custom` until resolved)
+- `02-components/code-components/ComponentPreview.tsx` — `cursorHover` /
+  `cursorHoverVariant` props (default **Off** until debt is closed)
 
 **Suggested next steps**
 
@@ -80,9 +80,9 @@ resolved — it has broken the visible cursor in testing.
 ### ClosePhoneNavOnSectionLink
 
 Superseded by native **On Click → Set Variant "Phone closed"** on nav links.
-See `docs/why-native-first.md`.
+See `04-knowledge/why-native-first.md`.
 
 ### LottieAspectOverrides
 
-Superseded by `components/LottieScroll.tsx`. Kept for the escape-hatch story in
-docs and README.
+Superseded by `02-components/code-components/LottieScroll.tsx`. Kept for the
+escape-hatch story in docs and README.

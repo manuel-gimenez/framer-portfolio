@@ -1,7 +1,7 @@
 # Why "native-first" for Framer
 
 This project includes a Cursor rule,
-[`.cursor/rules/framer-native-first.mdc`](../.cursor/rules/framer-native-first.mdc),
+[`.cursor/rules/framer-native-first.mdc`](../03-procedures/rules/framer-native-first.mdc),
 that tells the AI assistant to check for a **native Framer feature before
 writing a code override or component**. Here's the story behind it — and why
 it's a habit worth keeping.
@@ -24,7 +24,7 @@ nav-bar instance or to individual menu items.
 ## The reframe (escape hatch)
 
 After three attempts that were all variations of the same idea, I stepped back
-(see the [`escape-hatch`](../.cursor/skills/escape-hatch) skill) and questioned the
+(see the [`escape-hatch`](../03-procedures/skills/escape-hatch) skill) and questioned the
 assumption I'd never checked:
 
 > Can an override even set this component's variant?
@@ -51,7 +51,7 @@ cancelled by scroll/movement and silently does nothing on menu links.)
 
 I spent real time on code for something the tool does natively in a click. The
 abandoned override is kept at
-[`overrides/ClosePhoneNavOnSectionLink.tsx`](../overrides/ClosePhoneNavOnSectionLink.tsx)
+[`02-components/code-overrides/ClosePhoneNavOnSectionLink.tsx`](../02-components/code-overrides/ClosePhoneNavOnSectionLink.tsx)
 as the honest "before".
 
 So the rule now makes the assistant ask **"can Framer do this natively?"** before

@@ -9,14 +9,14 @@
  *
  * Usage: drop two instances on the System page beside CodeConsole — one per
  * demo. Pick Demo, edit Props (JSON), tap Restart to replay.
- * Cursor hover on restart is deferred (see docs/debt.md); leave Cursor Hover Off.
+ * Cursor hover on restart is deferred (see 04-knowledge/debt.md); leave Cursor Hover Off.
  *
  * Changelog
  *   v1.4.4 (08-07-2026) — Status 🟢 Live; cursor hover default Off (debt paused).
  *   v1.4.3 (07-07-2026) — Framer store bridge for cursor hover (replaces events).
  *   v1.4.2 (07-07-2026) — Window bridge for cursor hover; default variant Hover-01.
  *   v1.4.1 (07-07-2026) — Restart icon dispatches cursor-custom hover events;
- *     pairs with overrides/CursorHoverSync.tsx on cursor-custom.
+ *     pairs with 02-components/code-overrides/CursorHoverSync.tsx on cursor-custom.
  *   v1.4.0 (07-07-2026) — Scope to Text Scrambler + Mobile Coming Soon only;
  *     remove Lottie Scroll and Copy Email previews.
  *   v1.3.0 (06-07-2026) — Autoplay previews; restart icon; Lottie file upload.
@@ -42,7 +42,7 @@ import { addPropertyControls, ControlType } from "framer"
 
 const BUILD_ID = "v1.4.4"
 
-/** Must match overrides/CursorHoverSync.tsx */
+/** Must match 02-components/code-overrides/CursorHoverSync.tsx */
 const CURSOR_SETTER_KEY = "__portfolioCursorHoverSetter"
 
 type CursorHoverPatch = { active: boolean; variant: string }
@@ -711,7 +711,7 @@ addPropertyControls(ComponentPreview, {
         enabledTitle: "Link",
         disabledTitle: "Off",
         description:
-            "Experimental — paused. See docs/debt.md. Do not enable until CursorHoverSync is fixed.",
+            "Experimental — paused. See 04-knowledge/debt.md. Do not enable until CursorHoverSync is fixed.",
         hidden: ({ showRestart }) => !showRestart,
     },
     cursorHoverVariant: {

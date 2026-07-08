@@ -1,14 +1,10 @@
-# Rules & skills
+# Cursor (IDE wiring)
 
-Engineering habits for this repo — kept together under `.cursor/` so rules and
-skills sit side by side in the file tree.
+Symlinks only — the real files live in [`03-procedures/`](../03-procedures/).
 
-| Folder | What it is |
+| Symlink | Target |
 | --- | --- |
-| [`rules/`](./rules) | Cursor rules (`.mdc`) — native-first, code headers, status lights |
-| [`skills/`](./skills) | Problem-solving playbooks born from real work on this portfolio |
+| [`rules/`](./rules) | [`03-procedures/rules/`](../03-procedures/rules/) |
+| [`skills/`](./skills) | [`03-procedures/skills/`](../03-procedures/skills/) |
 
-**Rules** are loaded automatically by Cursor when editing this project.
-
-**Skills** are reusable methods (e.g. escape-hatch) you can invoke in chat or
-document on the System page under **Procedures**.
+Edit rules and skills in **03-procedures**, not here.

@@ -1,8 +1,7 @@
 # Skills
 
-Reusable skills I built while making this Framer portfolio. They live next to
-**rules** under [`.cursor/`](../) — open that folder in the repo sidebar to see
-both together.
+Reusable skills from this portfolio. They live in **`03-procedures/skills/`**
+next to **rules** — open that folder in the repo sidebar.
 
 Each skill folder contains:
 

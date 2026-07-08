@@ -1,14 +1,15 @@
 ---
 description: Mandatory file header + changelog for Framer code (components, overrides, custom-code)
-globs: "{components,overrides,custom-code}/**/*.{ts,tsx}"
+globs: "{02-components}/**/*.{ts,tsx}"
 alwaysApply: true
 ---
 
 # Code header convention
 
-Every file in `components/`, `overrides/`, or `custom-code/` **must** open with a
-JSDoc header — **before imports**. Use `ChipText.tsx` or `TextScrambler.tsx` as
-the reference (headers before imports).
+Every file in `02-components/code-components/`, `02-components/code-overrides/`,
+or `02-components/custom-code/` **must** open with a JSDoc header — **before
+imports**. Use `ChipText.tsx` or `TextScrambler.tsx` as the reference (headers
+before imports).
 
 ## Template
 
@@ -33,7 +34,7 @@ the reference (headers before imports).
 ## Status lights (required)
 
 Every header **must** include exactly one `Status:` line. Update when ship state
-changes. Full inventory: `docs/debt.md`.
+changes. Full inventory: `04-knowledge/debt.md`.
 
 | Light | Label | Meaning |
 | --- | --- | --- |
@@ -45,7 +46,7 @@ Examples:
 
 ```ts
  * Status: 🟢 Live — System page code blocks beside live demos.
- * Status: 🟡 🔧 Not ready — see docs/debt.md#cursor-hover-on-restart-icon.
+ * Status: 🟡 🔧 Not ready — see 04-knowledge/debt.md#cursor-hover-on-restart-icon.
  * Status: 🔴 Deprecated — superseded; not applied on the live site.
 ```
 
@@ -75,6 +76,6 @@ Keep existing `@framer...` lines in the header — they are functional, not deco
 
 ## Reference
 
-- `docs/debt.md` — inventory, open debt, tradeoffs
-- `foundations/README.md` — design token source of truth
-- `components/ChipText.tsx` — header before imports
+- `04-knowledge/debt.md` — inventory, open debt, tradeoffs
+- `01-foundations/README.md` — design token source of truth
+- `02-components/code-components/ChipText.tsx` — header before imports

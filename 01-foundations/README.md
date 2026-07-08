@@ -1,8 +1,8 @@
 # Foundations — design tokens
 
 Source of truth for colors, typography, spacing, radius, and layout tokens.
-Lives at the repo root next to `components/` and `overrides/` — not buried under
-`docs/`.
+Lives at `01-foundations/` in the numbered repo layout — first folder a hiring
+manager sees, peer to `02-components/`.
 
 These values come from the earlier **Figma Make** portfolio attempt, kept here as
 the reference for rebuilding the system natively in **Framer**.

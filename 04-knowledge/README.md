@@ -1,7 +1,9 @@
-# Docs
+# Knowledge
 
-Build specs, process, and engineering notes. **Tokens live in
-[`../foundations/`](../foundations/)** — not here.
+Build specs, process notes, and engineering write-ups. Maps to supporting docs
+on the System page and for anyone reviewing this repo.
+
+**Tokens are not here** — they live in [`01-foundations/`](../01-foundations/).
 
 | Doc | Purpose |
 | --- | --- |
@@ -10,4 +12,4 @@ Build specs, process, and engineering notes. **Tokens live in
 | [`design-process/`](./design-process/) | Research → Structure → Execute → Review |
 | [`system-page/`](./system-page/) | System page build spec + section briefs |
 
-**Cursor tooling** (rules + skills): [`.cursor/`](../.cursor/)
+**Procedures** (rules + skills): [`03-procedures/`](../03-procedures/)

@@ -1,13 +1,13 @@
 # Visual research — System page
 
 Quick ideas and reference targets for **structure**, not final visuals. Your
-tokens are in [`../../foundations/README.md`](../../foundations/README.md). Match
+tokens are in [`../../01-foundations/README.md`](../../01-foundations/README.md). Match
 the portfolio tone: minimal, editorial, Inter, generous desktop whitespace,
 muted `text/tertiary` green-gray.
 
 **10-minute sprint:** Skim the **Pattern menu** per section below. Pick **one
 pattern (A or B)** to try in Framer. Save screenshots of refs you like in
-`docs/system-page/references/` (create folder when you start collecting).
+`04-knowledge/system-page/references/` (create folder when you start collecting).
 
 ---
 
@@ -157,7 +157,7 @@ possible; screenshot for cursor (hard to embed on same page).
 | Pattern | Description | Fits your DS? |
 | --- | --- | --- |
 | **A — Step list** | Numbered workflow matching `design-process/README.md` | Meta — documents your process |
-| **B — Skill cards** | Name, when to use, link to `.cursor/skills` or rules | Cursor skills |
+| **B — Skill cards** | Name, when to use, link to `03-procedures/skills` or rules | Cursor skills |
 | **C — Before/after** | Native-first story (like `why-native-first.md`) | AI workflows |
 
 ---
@@ -177,7 +177,7 @@ your real Framer frames.
 ## Folder for your screenshots
 
 ```
-docs/system-page/references/
+04-knowledge/system-page/references/
   README.md          ← naming convention
   layout-*.png
   breakpoints-*.png

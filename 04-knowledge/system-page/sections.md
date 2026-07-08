@@ -1,7 +1,7 @@
 # System page — section briefs
 
 One place to lock **structure** before visual polish. Update **Structure** when
-you finish research. Token values live in [`../../foundations/README.md`](../../foundations/README.md).
+you finish research. Token values live in [`../../01-foundations/README.md`](../../01-foundations/README.md).
 
 **Status:** `done` · `structure` · `research` · `todo`
 
@@ -10,17 +10,18 @@ you finish research. Token values live in [`../../foundations/README.md`](../../
 ## Information architecture (page labels)
 
 How sections group on the live System page. The repo mirrors this split:
-`foundations/` for tokens, `components/` + `overrides/` for code, native UI
-documented later under **UI components**.
+`01-foundations/` for tokens, `02-components/code-components/` +
+`02-components/code-overrides/` for code, native UI documented later under **UI
+components**.
 
 | Page label | Section heading | What goes here |
 | --- | --- | --- |
 | **FOUNDATIONS** | Colors, Typography, Spacing, … | Design tokens (not code) |
 | **COMPONENTS** | _(parent — no H2 of its own)_ | Everything built in Framer |
-| ↳ | **Code components** | `components/*.tsx` — TextScrambler, LottieScroll, … |
-| ↳ | **Code overrides** | `overrides/*.tsx` — CopyEmail, MobileComingSoon, … |
+| ↳ | **Code components** | `02-components/code-components/*.tsx` |
+| ↳ | **Code overrides** | `02-components/code-overrides/*.tsx` |
 | ↳ | **UI components** | Native canvas components — nav-bar, footer, cursor-custom (todo) |
-| **PROCEDURES** | Rules, skills, workflows | `.cursor/rules`, `.cursor/skills`, design process |
+| **PROCEDURES** | Rules, skills, workflows | `03-procedures/rules`, `03-procedures/skills` |
 
 **Naming note:** Avoid a second heading called just "Components" under
 **COMPONENTS** — use **UI components** for native Framer pieces so
@@ -53,7 +54,7 @@ layout (`COMPONENTS` → `Code components`) matches this pattern.
 | **Status** | done |
 | **Pattern** | A — Swatch card grid |
 | **Structure** | Label `Foundations` → 2-col grid (1 col mobile) → each cell: 64px fill, token name, hex |
-| **Tokens** | 8 semantic Color Styles (see [`foundations/README.md`](../../foundations/README.md)) |
+| **Tokens** | 8 semantic Color Styles (see [`01-foundations/README.md`](../../01-foundations/README.md)) |
 | **Research notes** | _Optional: in-context mini UI (pattern B)_ |
 
 ### Typography — `done`
@@ -130,7 +131,7 @@ components and overrides into one list.
 | **Status** | done |
 | **Pattern** | A — Demo + CodeConsole |
 | **Structure** | Label `Components` once → H2 **Code components** → cards for TextScrambler, LottieScroll (+ ComponentPreview demos) |
-| **Items** | See `snippets/` and [`../../components/`](../../components/) |
+| **Items** | See `snippets/` and [`../../02-components/code-components/`](../../02-components/code-components/) |
 
 ### Code overrides — `done`
 
@@ -199,7 +200,7 @@ Native Framer canvas components (not in the Code panel). Renamed from
 | --- | --- |
 | **Status** | todo |
 | **Pattern** | B — Skill cards |
-| **Structure** | _TBD — pair rules (`.cursor/rules`) and skills (`.cursor/skills`) on one row or subsection_ |
+| **Structure** | _TBD — pair rules (`03-procedures/rules`) and skills (`03-procedures/skills`) on one row or subsection_ |
 
 ### AI workflows
 

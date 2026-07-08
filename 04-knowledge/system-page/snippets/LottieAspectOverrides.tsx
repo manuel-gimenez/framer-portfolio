@@ -14,8 +14,8 @@ import {
  * from each animation's aspect ratio to trim the black letterbox. It works, but
  * it can't reach the part of that component that creates the letterbox, so the
  * problem was never fully solved here. That dead end is what led to building a
- * self-contained player from scratch (see ../components/LottieScroll.tsx) and to
- * extracting the escape-hatch skill (see ../../.cursor/skills/escape-hatch).
+ * self-contained player from scratch (see ../../../02-components/code-components/LottieScroll.tsx) and to
+ * extracting the escape-hatch skill (see ../../../03-procedures/skills/escape-hatch).
  *
  * Kept on purpose as the honest "before" in that story.
  *
