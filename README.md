@@ -23,16 +23,10 @@ Folders are prefixed so GitHub lists them in intentional order — not alphabeti
 | 01 | [`01-foundations/`](./01-foundations/) | **Foundations** | Token source of truth |
 | 02 | [`02-components/`](./02-components/) | **Components** | `code-components/`, `code-overrides/`, `custom-code/`, `lotties/` |
 | 03 | [`03-procedures/`](./03-procedures/) | **Procedures** | `rules/`, `skills/` |
-| 04 | [`04-docs/`](./04-docs/) | _(supporting docs)_ | System page spec, debt, design process |
+| 04 | [`04-docs/`](./04-docs/) | _(engineering notes)_ | Debt, native-first, design process |
 
-Page IA (Code components vs Code overrides vs UI components):
-[`04-docs/system-page/sections.md`](./04-docs/system-page/sections.md).
-
-### What is and isn't code
-
-Framer only exports the **Code** panel as `.tsx` files. Native canvas components
-(`nav-bar`, `footer-home`, `cursor-custom`) live inside the `.framer` project —
-documented on the System page under **UI components**, not as source here.
+Native canvas components (`nav-bar`, `footer-home`, `cursor-custom`) live in the
+Framer project file — not exported as code in this repo.
 
 ## Status lights
 
@@ -49,8 +43,8 @@ Inventory: [`04-docs/debt.md`](./04-docs/debt.md). Enforced by
 | Code components | [`02-components/code-components/`](./02-components/code-components/) |
 | Code overrides | [`02-components/code-overrides/`](./02-components/code-overrides/) |
 | Rules & skills | [`03-procedures/`](./03-procedures/) |
-| System page build spec | [`04-docs/system-page/README.md`](./04-docs/system-page/README.md) |
 | Native-first | [`04-docs/why-native-first.md`](./04-docs/why-native-first.md) |
+| Technical debt | [`04-docs/debt.md`](./04-docs/debt.md) |
 
 ## The padding story
 

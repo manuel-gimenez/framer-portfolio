@@ -11,8 +11,7 @@ supporting assets. Maps to the **COMPONENTS** block on the System page.
 | [`lotties/`](./lotties/) | _(assets)_ | Upload or link from `LottieScroll` |
 
 Native canvas components (nav-bar, footer, cursor-custom) live in the Framer
-project file — documented under **UI components** in
-[`04-docs/system-page/sections.md`](../04-docs/system-page/sections.md).
+project file — not in this repo.
 
 ## Naming
 

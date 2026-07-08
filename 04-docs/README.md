@@ -1,15 +1,14 @@
 # Docs
 
-Build specs, process notes, and engineering write-ups. Maps to supporting docs
-on the System page and for anyone reviewing this repo.
+Engineering notes and decision logs for this repo. **Not** a mirror of the live
+System page — build that in Framer.
 
-**Tokens are not here** — they live in [`01-foundations/`](../01-foundations/).
+**Tokens:** [`01-foundations/`](../01-foundations/)
 
 | Doc | Purpose |
 | --- | --- |
-| [`debt.md`](./debt.md) | Open technical debt, status-light inventory |
+| [`debt.md`](./debt.md) | Open technical debt, code inventory + status lights |
 | [`why-native-first.md`](./why-native-first.md) | Prefer Framer native before code |
-| [`design-process/`](./design-process/) | Research → Structure → Execute → Review |
-| [`system-page/`](./system-page/) | System page build spec + section briefs |
+| [`design-process/`](./design-process/) | Short workflow when starting a new page or section |
 
 **Procedures** (rules + skills): [`03-procedures/`](../03-procedures/)
