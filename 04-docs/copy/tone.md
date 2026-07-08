@@ -26,9 +26,22 @@ For deferred copy workflow (e.g. a Cursor skill), see [`../backlog.md`](../backl
 | **Chips on terms** | `` `OKLCH` ``, `` `fg` ``, `` `Code panel` `` — not whole sentences |
 | **Framer context** | Say what ships in Framer vs what stays in repo / Figma when relevant |
 | **No hype** | Explain; don't sell |
+| **No em dashes** | Use commas, colons, or semicolons instead of `—` |
+| **Page intro** | Purpose + Figma→Framer arc only; don't list sections (side nav covers that) |
 
 **Avoid:** marketing fluff, first person in subtitles, per-component blurbs when
 the code header in `CodeConsole` already documents the item.
+
+---
+
+## Page intro — Design System
+
+Approved hero copy under the **Design System** title. Do not repeat section names;
+the **On this page** nav lists them.
+
+```
+This page documents the portfolio's design system for anyone reviewing how the live site is put together. The system was first defined in `Figma` and built out in `Framer` for the live site.
+```
 
 ---
 
@@ -87,6 +100,12 @@ cannot provide on their own.
 ## ChipText paste blocks
 
 Copy the paragraph only into the `text` property (backticks become chips).
+
+**Page intro (Design System)**
+
+```
+This page documents the portfolio's design system for anyone reviewing how the live site is put together. The system was first defined in `Figma` and built out in `Framer` for the live site.
+```
 
 **Code components**
 

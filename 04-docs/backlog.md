@@ -60,3 +60,4 @@ Repo docs and copy reference — not the live Framer page.
 _Move items here with date when shipped._
 
 - [x] Copy tone guide + Foundations + Code components/overrides subtitles (08-07-2026) — [`copy/tone.md`](./copy/tone.md)
+- [x] System page hero intro (08-07-2026) — [`copy/tone.md`](./copy/tone.md#page-intro--design-system)
