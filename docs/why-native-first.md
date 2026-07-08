@@ -24,7 +24,7 @@ nav-bar instance or to individual menu items.
 ## The reframe (escape hatch)
 
 After three attempts that were all variations of the same idea, I stepped back
-(see the [`escape-hatch`](../skills/escape-hatch) skill) and questioned the
+(see the [`escape-hatch`](../.cursor/skills/escape-hatch) skill) and questioned the
 assumption I'd never checked:
 
 > Can an override even set this component's variant?

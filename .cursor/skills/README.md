@@ -1,9 +1,8 @@
 # Skills
 
-Reusable skills I built while making this Framer portfolio. They're kept here —
-rather than buried in my global tooling — because each one came out of a real
-problem I hit on this project, and together they show how I work, not just what
-I shipped.
+Reusable skills I built while making this Framer portfolio. They live next to
+**rules** under [`.cursor/`](../) — open that folder in the repo sidebar to see
+both together.
 
 Each skill folder contains:
 

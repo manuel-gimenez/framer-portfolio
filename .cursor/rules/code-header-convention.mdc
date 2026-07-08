@@ -76,4 +76,5 @@ Keep existing `@framer...` lines in the header — they are functional, not deco
 ## Reference
 
 - `docs/debt.md` — inventory, open debt, tradeoffs
+- `foundations/README.md` — design token source of truth
 - `components/ChipText.tsx` — header before imports

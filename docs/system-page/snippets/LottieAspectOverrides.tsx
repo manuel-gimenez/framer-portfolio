@@ -15,7 +15,7 @@ import {
  * it can't reach the part of that component that creates the letterbox, so the
  * problem was never fully solved here. That dead end is what led to building a
  * self-contained player from scratch (see ../components/LottieScroll.tsx) and to
- * extracting the escape-hatch skill (see ../skills/escape-hatch).
+ * extracting the escape-hatch skill (see ../../.cursor/skills/escape-hatch).
  *
  * Kept on purpose as the honest "before" in that story.
  *

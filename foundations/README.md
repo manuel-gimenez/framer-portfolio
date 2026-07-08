@@ -1,7 +1,11 @@
-# Design system — source of truth
+# Foundations — design tokens
 
-These are the design tokens from the earlier **Figma Make** portfolio attempt,
-kept here as the reference for rebuilding the system natively in **Framer**.
+Source of truth for colors, typography, spacing, radius, and layout tokens.
+Lives at the repo root next to `components/` and `overrides/` — not buried under
+`docs/`.
+
+These values come from the earlier **Figma Make** portfolio attempt, kept here as
+the reference for rebuilding the system natively in **Framer**.
 
 - [`tokens.css`](./tokens.css) — the original CSS, verbatim (Tailwind v4). Not
   loaded by the Framer site; reference only.

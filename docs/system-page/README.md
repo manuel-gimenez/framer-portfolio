@@ -7,7 +7,7 @@ Step-by-step guide for building the **System** design-system page on
 **You build natively in Framer.** Code in this repo supports only the parts Framer
 can't do natively: the `CodeConsole` component and live demos of existing code.
 
-Token values live in [`../design-system/README.md`](../design-system/README.md).
+Token values live in [`../../foundations/README.md`](../../foundations/README.md).
 
 **Process & research (start here for new sections)**
 
@@ -23,7 +23,7 @@ Token values live in [`../design-system/README.md`](../design-system/README.md).
 
 ## Before you start
 
-1. Create Color Styles and Text Styles from the design-system doc (if not done yet).
+1. Create Color Styles and Text Styles from [`foundations/README.md`](../../foundations/README.md) (if not done yet).
 2. Import into Framer:
    - `components/CodeConsole.tsx`
    - `components/TextScrambler.tsx`
@@ -43,16 +43,15 @@ Build top to bottom. Each section gets a **Section** frame with an ID for anchor
 | 2 | `typography` | Typography | Native type samples |
 | 3 | `spacing` | Spacing | Native bar visuals |
 | 4 | `radius` | Radius | Native corner samples |
-| 5 | `overrides` | Overrides | Demo cards + `CodeConsole` |
-| 6 | `overrides` | Overrides | Demo cards + `CodeConsole` |
-| 7 | `components` | Components | Demo cards + `CodeConsole` |
-| 8 | `layout` | Layout | Native diagram (see [`sections.md`](./sections.md)) |
-| 9 | `breakpoints` | Breakpoints | Native device frames or token table |
-| 10 | `motion` | Motion | Native gallery / behavior notes |
-| 11 | `native` | Native | Framer component cards (nav, footer, …) |
-| 12 | `procedures` | Procedures | Cursor skills + AI workflow docs |
+| 5 | `code-overrides` | Code overrides | Demo cards + `CodeConsole` |
+| 6 | `code-components` | Code components | Demo cards + `CodeConsole` |
+| 7 | `layout` | Layout | Native diagram (see [`sections.md`](./sections.md)) |
+| 8 | `breakpoints` | Breakpoints | Native device frames or token table |
+| 9 | `motion` | Motion | Native gallery / behavior notes |
+| 10 | `ui-components` | UI components | Native Framer component cards (nav, footer, …) |
+| 11 | `procedures` | Procedures | Rules, skills + AI workflow docs |
 
-Sections 1–7 are **done or specced**. Sections 8–12 are **next steps** — structure
+Sections 1–6 are **done or specced**. Sections 7–11 are **next steps** — structure
 TBD in [`sections.md`](./sections.md) after visual research.
 
 ### Page header
@@ -72,7 +71,7 @@ with horizontal padding from `padding-horizontal` (16px mobile → 240px desktop
 
 No code needed.
 
-1. Create a horizontal stack of text links: Colors · Typography · Spacing · Radius · Overrides · Components
+1. Create a horizontal stack of text links: Colors · Typography · Spacing · Radius · Code components · Code overrides · UI components · Procedures
 2. Set the stack to **Position: Sticky**, `top: 0` (or below your site header offset).
 3. Give it a background (`surface/bg` or `background`) and a bottom border (`border`).
 4. For each link: **Link → Section** → pick the matching section frame on this page.
@@ -116,14 +115,14 @@ One row per text style. Each row shows:
 - Mobile values: size / line-height / letter-spacing
 - Desktop values (≥768px breakpoint)
 
-All 12 styles from the design-system doc:
+All 12 styles from [`foundations/README.md`](../../foundations/README.md):
 
 `hero-large`, `hero-default`, `h-large`, `h-default`, `h-small`,
 `subtitle-large`, `body-large`, `body-default`, `label-large`,
 `label-default`, `label-small`, `label-caption`
 
 Apply each as a Framer **Text Style** on the sample line. Override values on
-the Desktop breakpoint per the table in [`../design-system/README.md`](../design-system/README.md).
+the Desktop breakpoint per the table in [`../../foundations/README.md`](../../foundations/README.md).
 
 ---
 
@@ -161,7 +160,7 @@ Table or labeled bars for mobile → desktop:
 
 ## 4. Radius
 
-From [`../design-system/README.md`](../design-system/README.md#border-radius):
+From [`../../foundations/README.md`](../../foundations/README.md#border-radius):
 
 | Token | Value | Example use |
 | --- | --- | --- |
@@ -265,7 +264,7 @@ Run through this after the page is assembled in Framer. If anything looks off,
 tweak in Framer first; only then ask to adjust `CodeConsole` styling in the repo.
 
 - [ ] Sticky nav scrolls to the correct section on click (all 6 links)
-- [ ] Color swatches match hex values in the design-system doc
+- [ ] Color swatches match hex values in [`foundations/README.md`](../../foundations/README.md)
 - [ ] Typography samples use Text Styles (not one-off local styles)
 - [ ] Desktop breakpoint (≥768px) shows correct type + spacing values
 - [ ] `CopyEmail` demo copies email and shows toast

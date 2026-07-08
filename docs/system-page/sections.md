@@ -1,9 +1,34 @@
 # System page — section briefs
 
 One place to lock **structure** before visual polish. Update **Structure** when
-you finish research. Token values live in [`../design-system/README.md`](../design-system/README.md).
+you finish research. Token values live in [`../../foundations/README.md`](../../foundations/README.md).
 
 **Status:** `done` · `structure` · `research` · `todo`
+
+---
+
+## Information architecture (page labels)
+
+How sections group on the live System page. The repo mirrors this split:
+`foundations/` for tokens, `components/` + `overrides/` for code, native UI
+documented later under **UI components**.
+
+| Page label | Section heading | What goes here |
+| --- | --- | --- |
+| **FOUNDATIONS** | Colors, Typography, Spacing, … | Design tokens (not code) |
+| **COMPONENTS** | _(parent — no H2 of its own)_ | Everything built in Framer |
+| ↳ | **Code components** | `components/*.tsx` — TextScrambler, LottieScroll, … |
+| ↳ | **Code overrides** | `overrides/*.tsx` — CopyEmail, MobileComingSoon, … |
+| ↳ | **UI components** | Native canvas components — nav-bar, footer, cursor-custom (todo) |
+| **PROCEDURES** | Rules, skills, workflows | `.cursor/rules`, `.cursor/skills`, design process |
+
+**Naming note:** Avoid a second heading called just "Components" under
+**COMPONENTS** — use **UI components** for native Framer pieces so
+**Code components** stays unambiguous.
+
+On Framer: use a small caps **label** (`COMPONENTS`) then H2s for each row
+(**Code components**, **Code overrides**, **UI components**). Your screenshot
+layout (`COMPONENTS` → `Code components`) matches this pattern.
 
 ---
 
@@ -13,9 +38,9 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | --- | --- |
 | **Title** | Design System (or System) |
 | **Intro** | Tokens, typography, spacing, and live code from this portfolio. |
-| **Nav** | Sticky: Colors · Typography · Spacing · Radius · Layout · Breakpoints · Motion · Overrides · Components · Native · Procedures |
+| **Nav** | Sticky: Colors · Typography · Spacing · Radius · Layout · Breakpoints · Motion · Code components · Code overrides · UI components · Procedures |
 | **Content width** | Max 680–800px centered; `padding-horizontal` 16 → 240 |
-| **Structure** | Header → sticky anchor nav → stacked sections with IDs |
+| **Structure** | Header → sticky anchor nav → Foundations block → Components block (3 subsections) → Procedures |
 
 ---
 
@@ -28,7 +53,7 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | **Status** | done |
 | **Pattern** | A — Swatch card grid |
 | **Structure** | Label `Foundations` → 2-col grid (1 col mobile) → each cell: 64px fill, token name, hex |
-| **Tokens** | 8 semantic Color Styles (see design-system doc) |
+| **Tokens** | 8 semantic Color Styles (see [`foundations/README.md`](../../foundations/README.md)) |
 | **Research notes** | _Optional: in-context mini UI (pattern B)_ |
 
 ### Typography — `done`
@@ -78,7 +103,7 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | **Status** | research |
 | **Pattern** | _Pick: B token delta table or A device trio_ |
 | **Structure** | _TBD — primary breakpoint 768px; what changes per token group_ |
-| **Tokens** | All mobile→desktop pairs in design-system doc |
+| **Tokens** | All mobile→desktop pairs in foundations doc |
 | **Research notes** | Upload `Portfolio-foundation-breakpoint` when ready |
 
 ### Motion — `todo`
@@ -93,32 +118,36 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 
 ---
 
-## Code
+## Components
 
-### Overrides — `done`
+Page label: **COMPONENTS**. Three subsections below — do not merge code
+components and overrides into one list.
+
+### Code components — `done`
 
 | Field | Value |
 | --- | --- |
 | **Status** | done |
 | **Pattern** | A — Demo + CodeConsole |
-| **Structure** | Card per override → title + description → demo | snippet → superseded badge where applicable |
+| **Structure** | Label `Components` once → H2 **Code components** → cards for TextScrambler, LottieScroll (+ ComponentPreview demos) |
+| **Items** | See `snippets/` and [`../../components/`](../../components/) |
+
+### Code overrides — `done`
+
+| Field | Value |
+| --- | --- |
+| **Status** | done |
+| **Pattern** | A — Demo + CodeConsole |
+| **Structure** | H2 **Code overrides** → card per override → title + description → demo \| snippet → superseded badge where applicable |
 | **Items** | CopyEmail (live), MobileComingSoon, ClosePhoneNavOnSectionLink†, LottieAspectOverrides† |
 | **Research notes** | † reference-only per `why-native-first.md` |
 
-### Components (code) — `done`
+### UI components — `todo`
 
-| Field | Value |
-| --- | --- |
-| **Status** | done |
-| **Pattern** | A — Demo + CodeConsole |
-| **Structure** | TextScrambler + LottieScroll live demos |
-| **Items** | See `snippets/` |
+Native Framer canvas components (not in the Code panel). Renamed from
+"Framer-native components" to avoid clashing with **Code components**.
 
----
-
-## Framer-native components — `todo`
-
-### Nav bar
+#### Nav bar
 
 | Field | Value |
 | --- | --- |
@@ -127,7 +156,7 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | **Structure** | _TBD — Phone closed / Phone open; link to native Set Variant fix_ |
 | **Research notes** | Screenshot from live site |
 
-### Menu item
+#### Menu item
 
 | Field | Value |
 | --- | --- |
@@ -135,7 +164,7 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | **Pattern** | _Variant matrix row or anatomy_ |
 | **Structure** | _TBD — default, hover, active; WORK/CONTACT vs AI LAB behavior_ |
 
-### Site identity
+#### Site identity
 
 | Field | Value |
 | --- | --- |
@@ -143,7 +172,7 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | **Pattern** | _Anatomy (B)_ |
 | **Structure** | _TBD — logo/wordmark, sizes, placement in nav_ |
 
-### Footer
+#### Footer
 
 | Field | Value |
 | --- | --- |
@@ -151,7 +180,7 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 | **Pattern** | _Anatomy (B)_ |
 | **Structure** | _TBD — links, social, spacing, type styles used_ |
 
-### Custom cursor
+#### Custom cursor
 
 | Field | Value |
 | --- | --- |
@@ -164,13 +193,13 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 
 ## Procedures — `todo`
 
-### Cursor skills
+### Rules & skills
 
 | Field | Value |
 | --- | --- |
 | **Status** | todo |
 | **Pattern** | B — Skill cards |
-| **Structure** | _TBD — name, trigger, path under `.cursor/skills`_ |
+| **Structure** | _TBD — pair rules (`.cursor/rules`) and skills (`.cursor/skills`) on one row or subsection_ |
 
 ### AI workflows
 
@@ -186,9 +215,9 @@ you finish research. Token values live in [`../design-system/README.md`](../desi
 
 ```
 colors → typography → spacing → radius → layout → breakpoints → motion
-→ overrides → components → native (sub: nav, menu, identity, footer, cursor)
+→ code-components → code-overrides → ui-components
 → procedures
 ```
 
-Native subsections can share one `native` anchor with in-page subheadings, or
-split IDs if sticky nav gets too long.
+Native pieces share anchor `ui-components` with in-page H3s (nav, menu, footer,
+cursor). Split into separate anchors only if the sticky nav gets too long.

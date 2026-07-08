@@ -1,7 +1,7 @@
 # Visual research — System page
 
 Quick ideas and reference targets for **structure**, not final visuals. Your
-tokens are in [`../design-system/README.md`](../design-system/README.md). Match
+tokens are in [`../../foundations/README.md`](../../foundations/README.md). Match
 the portfolio tone: minimal, editorial, Inter, generous desktop whitespace,
 muted `text/tertiary` green-gray.
 
