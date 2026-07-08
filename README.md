@@ -14,7 +14,7 @@ Folders are prefixed so GitHub lists them in intentional order — not alphabeti
 ├── 01-foundations/     # Design tokens — colors, typography, spacing, radius
 ├── 02-components/      # Code components, overrides, custom code, lotties
 ├── 03-procedures/      # Rules + skills (how I work)
-├── 04-knowledge/       # Build specs, debt, process notes
+├── 04-docs/       # Build specs, debt, process notes
 └── .cursor/            # Symlinks → 03-procedures (for Cursor IDE)
 ```
 
@@ -23,10 +23,10 @@ Folders are prefixed so GitHub lists them in intentional order — not alphabeti
 | 01 | [`01-foundations/`](./01-foundations/) | **Foundations** | Token source of truth |
 | 02 | [`02-components/`](./02-components/) | **Components** | `code-components/`, `code-overrides/`, `custom-code/`, `lotties/` |
 | 03 | [`03-procedures/`](./03-procedures/) | **Procedures** | `rules/`, `skills/` |
-| 04 | [`04-knowledge/`](./04-knowledge/) | _(supporting docs)_ | System page spec, debt, design process |
+| 04 | [`04-docs/`](./04-docs/) | _(supporting docs)_ | System page spec, debt, design process |
 
 Page IA (Code components vs Code overrides vs UI components):
-[`04-knowledge/system-page/sections.md`](./04-knowledge/system-page/sections.md).
+[`04-docs/system-page/sections.md`](./04-docs/system-page/sections.md).
 
 ### What is and isn't code
 
@@ -38,7 +38,7 @@ documented on the System page under **UI components**, not as source here.
 
 Every code file has a `Status:` line in its header: 🟢 Live · 🟡 Not ready · 🔴 Deprecated.
 
-Inventory: [`04-knowledge/debt.md`](./04-knowledge/debt.md). Enforced by
+Inventory: [`04-docs/debt.md`](./04-docs/debt.md). Enforced by
 [`03-procedures/rules/code-header-convention.mdc`](./03-procedures/rules/code-header-convention.mdc).
 
 ## Quick links
@@ -49,8 +49,8 @@ Inventory: [`04-knowledge/debt.md`](./04-knowledge/debt.md). Enforced by
 | Code components | [`02-components/code-components/`](./02-components/code-components/) |
 | Code overrides | [`02-components/code-overrides/`](./02-components/code-overrides/) |
 | Rules & skills | [`03-procedures/`](./03-procedures/) |
-| System page build spec | [`04-knowledge/system-page/README.md`](./04-knowledge/system-page/README.md) |
-| Native-first | [`04-knowledge/why-native-first.md`](./04-knowledge/why-native-first.md) |
+| System page build spec | [`04-docs/system-page/README.md`](./04-docs/system-page/README.md) |
+| Native-first | [`04-docs/why-native-first.md`](./04-docs/why-native-first.md) |
 
 ## The padding story
 

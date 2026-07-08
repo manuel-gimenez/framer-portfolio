@@ -7,7 +7,7 @@ muted `text/tertiary` green-gray.
 
 **10-minute sprint:** Skim the **Pattern menu** per section below. Pick **one
 pattern (A or B)** to try in Framer. Save screenshots of refs you like in
-`04-knowledge/system-page/references/` (create folder when you start collecting).
+`04-docs/system-page/references/` (create folder when you start collecting).
 
 ---
 
@@ -177,7 +177,7 @@ your real Framer frames.
 ## Folder for your screenshots
 
 ```
-04-knowledge/system-page/references/
+04-docs/system-page/references/
   README.md          ← naming convention
   layout-*.png
   breakpoints-*.png

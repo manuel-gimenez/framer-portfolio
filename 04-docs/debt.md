@@ -80,7 +80,7 @@ resolved — it has broken the visible cursor in testing.
 ### ClosePhoneNavOnSectionLink
 
 Superseded by native **On Click → Set Variant "Phone closed"** on nav links.
-See `04-knowledge/why-native-first.md`.
+See `04-docs/why-native-first.md`.
 
 ### LottieAspectOverrides
 

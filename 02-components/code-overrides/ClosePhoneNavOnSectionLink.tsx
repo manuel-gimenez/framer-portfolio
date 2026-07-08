@@ -13,7 +13,7 @@
  * as a reference, NOT used on the live site. Forcing `variant` from an override
  * does not work when the nav-bar owns its variant through internal interactions.
  * Shipped fix: native On Click → Set Variant "Phone closed" on WORK / CONTACT.
- * See ../../04-knowledge/why-native-first.md.
+ * See ../../04-docs/why-native-first.md.
  *
  * Changelog
  *   v1.0.4 (08-07-2026) — Add 🔴 Deprecated status line.

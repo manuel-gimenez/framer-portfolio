@@ -34,7 +34,7 @@ before imports).
 ## Status lights (required)
 
 Every header **must** include exactly one `Status:` line. Update when ship state
-changes. Full inventory: `04-knowledge/debt.md`.
+changes. Full inventory: `04-docs/debt.md`.
 
 | Light | Label | Meaning |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ Examples:
 
 ```ts
  * Status: 🟢 Live — System page code blocks beside live demos.
- * Status: 🟡 🔧 Not ready — see 04-knowledge/debt.md#cursor-hover-on-restart-icon.
+ * Status: 🟡 🔧 Not ready — see 04-docs/debt.md#cursor-hover-on-restart-icon.
  * Status: 🔴 Deprecated — superseded; not applied on the live site.
 ```
 
@@ -76,6 +76,6 @@ Keep existing `@framer...` lines in the header — they are functional, not deco
 
 ## Reference
 
-- `04-knowledge/debt.md` — inventory, open debt, tradeoffs
+- `04-docs/debt.md` — inventory, open debt, tradeoffs
 - `01-foundations/README.md` — design token source of truth
 - `02-components/code-components/ChipText.tsx` — header before imports

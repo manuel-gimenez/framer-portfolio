@@ -2,7 +2,7 @@
  * CursorHoverSync — syncs cursor-custom to hover variant from code components.
  *
  * Status: 🟡 🔧 Not ready — paused; do not apply on cursor-custom. See
- *   04-knowledge/debt.md#cursor-hover-on-restart-icon.
+ *   04-docs/debt.md#cursor-hover-on-restart-icon.
  *
  * Problem it solves: Framer's native Cursor → Set Variant only works on canvas
  * layers, not inside code components. ComponentPreview dispatches hover state

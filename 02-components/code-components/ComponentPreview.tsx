@@ -9,7 +9,7 @@
  *
  * Usage: drop two instances on the System page beside CodeConsole — one per
  * demo. Pick Demo, edit Props (JSON), tap Restart to replay.
- * Cursor hover on restart is deferred (see 04-knowledge/debt.md); leave Cursor Hover Off.
+ * Cursor hover on restart is deferred (see 04-docs/debt.md); leave Cursor Hover Off.
  *
  * Changelog
  *   v1.4.4 (08-07-2026) — Status 🟢 Live; cursor hover default Off (debt paused).
@@ -711,7 +711,7 @@ addPropertyControls(ComponentPreview, {
         enabledTitle: "Link",
         disabledTitle: "Off",
         description:
-            "Experimental — paused. See 04-knowledge/debt.md. Do not enable until CursorHoverSync is fixed.",
+            "Experimental — paused. See 04-docs/debt.md. Do not enable until CursorHoverSync is fixed.",
         hidden: ({ showRestart }) => !showRestart,
     },
     cursorHoverVariant: {

@@ -12,4 +12,4 @@ supporting assets. Maps to the **COMPONENTS** block on the System page.
 
 Native canvas components (nav-bar, footer, cursor-custom) live in the Framer
 project file — documented under **UI components** in
-[`04-knowledge/system-page/sections.md`](../04-knowledge/system-page/sections.md).
+[`04-docs/system-page/sections.md`](../04-docs/system-page/sections.md).

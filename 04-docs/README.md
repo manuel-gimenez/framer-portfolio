@@ -1,4 +1,4 @@
-# Knowledge
+# Docs
 
 Build specs, process notes, and engineering write-ups. Maps to supporting docs
 on the System page and for anyone reviewing this repo.
